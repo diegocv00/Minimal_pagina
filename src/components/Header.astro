@@ -82,22 +82,22 @@
     <!-- Mobile Menu Overlay -->
     <div
         id="mobile-menu"
-        class="fixed inset-0 bg-white dark:bg-stone-950 z-40 transform translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col justify-between items-center py-24 px-8"
+        class="fixed inset-0 bg-white dark:bg-stone-900 z-40 transform translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col justify-between items-center py-24 px-8"
     >
         <div class="flex flex-col items-center gap-10 mt-12 w-full">
             <a
                 href="/"
-                class="font-headline text-3xl sm:text-4xl uppercase tracking-[0.2em] font-extrabold hover:text-stone-500 transition-colors w-full text-center"
+                class="font-headline text-3xl sm:text-4xl uppercase tracking-[0.2em] font-extrabold hover:text-stone-500 text-stone-950 dark:text-stone-50 transition-colors w-full text-center"
                 >Inicio</a
             >
             <a
                 href="/proyectos"
-                class="font-headline text-3xl sm:text-4xl uppercase tracking-[0.2em] font-extrabold hover:text-stone-500 transition-colors w-full text-center"
+                class="font-headline text-3xl sm:text-4xl uppercase tracking-[0.2em] font-extrabold hover:text-stone-500 text-stone-950 dark:text-stone-50 transition-colors w-full text-center"
                 >Proyectos</a
             >
             <a
                 href="/nosotros"
-                class="font-headline text-3xl sm:text-4xl uppercase tracking-[0.2em] font-extrabold hover:text-stone-500 transition-colors w-full text-center"
+                class="font-headline text-3xl sm:text-4xl uppercase tracking-[0.2em] font-extrabold hover:text-stone-500 text-stone-950 dark:text-stone-50 transition-colors w-full text-center"
                 >Nosotros</a
             >
         </div>
@@ -161,7 +161,7 @@
             }
             document.body.style.overflow = "hidden";
             navElement?.classList.remove("bg-white/80", "dark:bg-stone-900/80", "backdrop-blur-xl");
-            navElement?.classList.add("bg-white", "dark:bg-stone-950");
+            navElement?.classList.add("bg-white", "dark:bg-stone-900");
         } else {
             mobileMenu?.classList.add("translate-x-full");
             if (menuIcon) {
@@ -170,7 +170,7 @@
             }
             document.body.style.overflow = "";
             navElement?.classList.add("bg-white/80", "dark:bg-stone-900/80", "backdrop-blur-xl");
-            navElement?.classList.remove("bg-white", "dark:bg-stone-950");
+            navElement?.classList.remove("bg-white", "dark:bg-stone-900");
         }
     });
 
@@ -186,7 +186,7 @@
             }
             document.body.style.overflow = "";
             navElement?.classList.add("bg-white/80", "dark:bg-stone-900/80", "backdrop-blur-xl");
-            navElement?.classList.remove("bg-white", "dark:bg-stone-950");
+            navElement?.classList.remove("bg-white", "dark:bg-stone-900");
         });
     });
 </script>
