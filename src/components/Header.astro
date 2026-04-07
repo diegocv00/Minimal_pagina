@@ -3,7 +3,7 @@
 ---
 
 <nav
-    class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl"
+    class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl transition-colors duration-500"
 >
     <div
         class="flex justify-between items-center w-full px-8 py-6 max-w-[1920px] mx-auto"
@@ -87,17 +87,17 @@
         <div class="flex flex-col items-center gap-10 mt-12 w-full">
             <a
                 href="/"
-                class="font-headline text-4xl uppercase tracking-[0.2em] font-extrabold hover:text-stone-500 transition-colors w-full text-center"
+                class="font-headline text-3xl sm:text-4xl uppercase tracking-[0.2em] font-extrabold hover:text-stone-500 transition-colors w-full text-center"
                 >Inicio</a
             >
             <a
                 href="/proyectos"
-                class="font-headline text-4xl uppercase tracking-[0.2em] font-extrabold hover:text-stone-500 transition-colors w-full text-center"
+                class="font-headline text-3xl sm:text-4xl uppercase tracking-[0.2em] font-extrabold hover:text-stone-500 transition-colors w-full text-center"
                 >Proyectos</a
             >
             <a
                 href="/nosotros"
-                class="font-headline text-4xl uppercase tracking-[0.2em] font-extrabold hover:text-stone-500 transition-colors w-full text-center"
+                class="font-headline text-3xl sm:text-4xl uppercase tracking-[0.2em] font-extrabold hover:text-stone-500 transition-colors w-full text-center"
                 >Nosotros</a
             >
         </div>
@@ -149,6 +149,8 @@
     const menuIcon = menuToggle?.querySelector(".material-symbols-outlined");
     let isMenuOpen = false;
 
+    const navElement = document.querySelector("nav");
+
     menuToggle?.addEventListener("click", () => {
         isMenuOpen = !isMenuOpen;
         if (isMenuOpen) {
@@ -158,6 +160,8 @@
                 menuIcon.style.transform = "rotate(90deg)";
             }
             document.body.style.overflow = "hidden";
+            navElement?.classList.remove("bg-white/80", "dark:bg-stone-900/80", "backdrop-blur-xl");
+            navElement?.classList.add("bg-white", "dark:bg-stone-950");
         } else {
             mobileMenu?.classList.add("translate-x-full");
             if (menuIcon) {
@@ -165,6 +169,8 @@
                 menuIcon.style.transform = "rotate(0deg)";
             }
             document.body.style.overflow = "";
+            navElement?.classList.add("bg-white/80", "dark:bg-stone-900/80", "backdrop-blur-xl");
+            navElement?.classList.remove("bg-white", "dark:bg-stone-950");
         }
     });
 
@@ -179,6 +185,8 @@
                 menuIcon.style.transform = "rotate(0deg)";
             }
             document.body.style.overflow = "";
+            navElement?.classList.add("bg-white/80", "dark:bg-stone-900/80", "backdrop-blur-xl");
+            navElement?.classList.remove("bg-white", "dark:bg-stone-950");
         });
     });
 </script>
