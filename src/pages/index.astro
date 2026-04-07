@@ -18,15 +18,30 @@ import AptoCC_6 from "../assets/AptoCC/AptoCC_6.jpeg";
 import AptoCC_7 from "../assets/AptoCC/AptoCC_7.jpeg";
 import AptoCC_8 from "../assets/AptoCC/AptoCC_8.jpeg";
 
+import AptoLR1 from "../assets/AptoLR/AptoLR1.jpg";
+import AptoLR2 from "../assets/AptoLR/AptoLR2.jpg";
+import AptoLR3 from "../assets/AptoLR/AptoLR3.jpg";
+import AptoLR4 from "../assets/AptoLR/AptoLR4.jpg";
+import AptoLR5 from "../assets/AptoLR/AptoLR5.jpg";
+import AptoLR6 from "../assets/AptoLR/AptoLR6.jpg";
+
+import CasaM8_1 from "../assets/CasaM8/CasaM8_1.jpeg";
+import CasaM8_2 from "../assets/CasaM8/CasaM8_2.jpeg";
+
 const featuredProjects = [
     {
-        id: "axis-office",
-        title: "AXIS OFFICE CENTER",
-        year: "2023",
-        location: "LISBOA",
+        id: "aptolr",
+        title: "APARTAMENTO LR",
+        location: "",
+        description:
+            "Remodelación de un apartmento enfocada en la optimización del espacio y materialidad pura.",
         images: [
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuCys2C236QTQnFrau5CINKZFL578Hm5-QxPExPDtSpG7QmnCu6ws-hJdDZO-DCWmfUZRFzZwcwtDwd01dWVFkgQnznPtkSfEamZc-QqOiTycW1keOlhD7cuFk_IjYmaBXXJsdNq-MUjm6VaUMqTROcJw47hSVrDDT5p-9yQHSRcsid6QpK2ocFmIFqcGBc2kQfSMaqgnbnRoFXUPGCvRXFK8rcGhKPRviTuivXc9bkZ935cGIWcGDeG2NNpxKnCL2PLfRQaDVrnTbYS",
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuDnmM0Yk0fdyn4cccA7B5iPVRKMUF1KvtV63r6wbpDSBMsbtjTeZbZPyHPi6rNECWbeosRTaQdqzWzPqK4doI7ogJD2Xefq7pFHBA0Tb2nEAOs1-5fI3Gn9pKVmrlf2tTZfo2fzioV51wyaaGbjwvM04qSqVWV0GX5NNVA5E_i_6XBniF8tNoBYCZlUhyFjEN6qh9Vym8b5-xiINtF3KEljmoOI0qIZqN0EVrTfmwRELqzRro63Ex5tH5cNxng3ZzO2qCUTpgTIMk7b",
+            AptoLR1.src,
+            AptoLR2.src,
+            AptoLR3.src,
+            AptoLR4.src,
+            AptoLR5.src,
+            AptoLR6.src,
         ],
         span: "lg:col-span-7",
     },
@@ -45,7 +60,7 @@ const featuredProjects = [
             AptoCC_7.src,
             AptoCC_8.src,
         ],
-        span: "lg:col-span-4 lg:col-start-9 md:mt-32",
+        span: "lg:col-span-4 lg:col-start-9 md:mt-36",
     },
     {
         id: "brutalist-pavilion",
@@ -73,10 +88,27 @@ const featuredProjects = [
 
 <Layout title="Minimal arquitectura | Inicio">
     <!-- Hero Section -->
-    <header class="relative h-screen w-full overflow-hidden bg-black">
+    <header
+        class="relative h-[calc(100vh-8rem)] min-h-[600px] mt-32 w-full overflow-hidden bg-black"
+    >
         <div class="absolute inset-0 z-0">
             <ProjectCarousel
-                images={featuredProjects.map((p) => p.images[0])}
+                images={[
+                    CasaM8_1.src,
+                    AptoCC_1.src,
+                    ER1.src,
+                    AptoLR1.src,
+                    CasaM8_2.src,
+                    AptoCC_2.src,
+                    ER2.src,
+                    AptoLR2.src,
+                    AptoCC_3.src,
+                    ER3.src,
+                    AptoLR3.src,
+                    AptoCC_4.src,
+                    ER4.src,
+                    AptoLR4.src,
+                ]}
                 id="hero-carousel"
                 columns={1}
             />
@@ -91,7 +123,7 @@ const featuredProjects = [
             <h1
                 class="font-headline text-5xl sm:text-[5rem] md:text-[8rem] lg:text-[10rem] leading-[0.9] md:leading-[0.85] tracking-tighter text-white max-w-5xl uppercase drop-shadow-xl"
             >
-                Definiendo<br />el vacío.
+                Definiendo<span class="block mt-6">el vacío.</span>
             </h1>
         </div>
     </header>
