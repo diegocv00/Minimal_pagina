@@ -2,77 +2,70 @@
 import Layout from "../layouts/Layout.astro";
 import ProjectCarousel from "../components/ProjectCarousel.astro";
 
-import ER1 from '../assets/Essence_R/ER1.jpeg';
-import ER2 from '../assets/Essence_R/ER2.jpeg';
-import ER3 from '../assets/Essence_R/ER3.jpeg';
-import ER4 from '../assets/Essence_R/ER4.jpeg';
-import ER5 from '../assets/Essence_R/ER5.jpeg';
-import ER6 from '../assets/Essence_R/ER6.jpeg';
+import ER1 from "../assets/Essence_R/ER1.jpeg";
+import ER2 from "../assets/Essence_R/ER2.jpeg";
+import ER3 from "../assets/Essence_R/ER3.jpeg";
+import ER4 from "../assets/Essence_R/ER4.jpeg";
+import ER5 from "../assets/Essence_R/ER5.jpeg";
+import ER6 from "../assets/Essence_R/ER6.jpeg";
 
-import R1_1 from '../assets/Residencial1/R1_1.jpeg';
-import R1_2 from '../assets/Residencial1/R1_2.jpeg';
-import R1_3 from '../assets/Residencial1/R1_3.jpeg';
-import R1_4 from '../assets/Residencial1/R1_4.jpeg';
-import R1_5 from '../assets/Residencial1/R1_5.jpeg';
-import R1_6 from '../assets/Residencial1/R1_6.jpeg';
-import R1_7 from '../assets/Residencial1/R1_7.jpeg';
-import R1_8 from '../assets/Residencial1/R1_8.jpeg';
+import AptoCC_1 from "../assets/AptoCC/AptoCC_1.jpeg";
+import AptoCC_2 from "../assets/AptoCC/AptoCC_2.jpeg";
+import AptoCC_3 from "../assets/AptoCC/AptoCC_3.jpeg";
+import AptoCC_4 from "../assets/AptoCC/AptoCC_4.jpeg";
+import AptoCC_5 from "../assets/AptoCC/AptoCC_5.jpeg";
+import AptoCC_6 from "../assets/AptoCC/AptoCC_6.jpeg";
+import AptoCC_7 from "../assets/AptoCC/AptoCC_7.jpeg";
+import AptoCC_8 from "../assets/AptoCC/AptoCC_8.jpeg";
 
 const featuredProjects = [
     {
-        id: 'axis-office',
-        title: 'AXIS OFFICE CENTER',
-        year: '2023',
-        location: 'LISBOA',
+        id: "axis-office",
+        title: "AXIS OFFICE CENTER",
+        year: "2023",
+        location: "LISBOA",
         images: [
-            'https://lh3.googleusercontent.com/aida-public/AB6AXuCys2C236QTQnFrau5CINKZFL578Hm5-QxPExPDtSpG7QmnCu6ws-hJdDZO-DCWmfUZRFzZwcwtDwd01dWVFkgQnznPtkSfEamZc-QqOiTycW1keOlhD7cuFk_IjYmaBXXJsdNq-MUjm6VaUMqTROcJw47hSVrDDT5p-9yQHSRcsid6QpK2ocFmIFqcGBc2kQfSMaqgnbnRoFXUPGCvRXFK8rcGhKPRviTuivXc9bkZ935cGIWcGDeG2NNpxKnCL2PLfRQaDVrnTbYS',
-            'https://lh3.googleusercontent.com/aida-public/AB6AXuDnmM0Yk0fdyn4cccA7B5iPVRKMUF1KvtV63r6wbpDSBMsbtjTeZbZPyHPi6rNECWbeosRTaQdqzWzPqK4doI7ogJD2Xefq7pFHBA0Tb2nEAOs1-5fI3Gn9pKVmrlf2tTZfo2fzioV51wyaaGbjwvM04qSqVWV0GX5NNVA5E_i_6XBniF8tNoBYCZlUhyFjEN6qh9Vym8b5-xiINtF3KEljmoOI0qIZqN0EVrTfmwRELqzRro63Ex5tH5cNxng3ZzO2qCUTpgTIMk7b'
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuCys2C236QTQnFrau5CINKZFL578Hm5-QxPExPDtSpG7QmnCu6ws-hJdDZO-DCWmfUZRFzZwcwtDwd01dWVFkgQnznPtkSfEamZc-QqOiTycW1keOlhD7cuFk_IjYmaBXXJsdNq-MUjm6VaUMqTROcJw47hSVrDDT5p-9yQHSRcsid6QpK2ocFmIFqcGBc2kQfSMaqgnbnRoFXUPGCvRXFK8rcGhKPRviTuivXc9bkZ935cGIWcGDeG2NNpxKnCL2PLfRQaDVrnTbYS",
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuDnmM0Yk0fdyn4cccA7B5iPVRKMUF1KvtV63r6wbpDSBMsbtjTeZbZPyHPi6rNECWbeosRTaQdqzWzPqK4doI7ogJD2Xefq7pFHBA0Tb2nEAOs1-5fI3Gn9pKVmrlf2tTZfo2fzioV51wyaaGbjwvM04qSqVWV0GX5NNVA5E_i_6XBniF8tNoBYCZlUhyFjEN6qh9Vym8b5-xiINtF3KEljmoOI0qIZqN0EVrTfmwRELqzRro63Ex5tH5cNxng3ZzO2qCUTpgTIMk7b",
         ],
-        span: 'lg:col-span-7'
+        span: "lg:col-span-7",
     },
     {
-        id: 'residencial-1',
-        title: 'RESIDENCIAL 1',
-        year: '2024',
-        location: '',
+        id: "aptocc",
+        title: "APARTAMENTO CC",
+        year: "2024",
+        location: "",
         images: [
-            R1_1.src,
-            R1_2.src,
-            R1_3.src,
-            R1_4.src,
-            R1_5.src,
-            R1_6.src,
-            R1_7.src,
-            R1_8.src
+            AptoCC_1.src,
+            AptoCC_2.src,
+            AptoCC_3.src,
+            AptoCC_4.src,
+            AptoCC_5.src,
+            AptoCC_6.src,
+            AptoCC_7.src,
+            AptoCC_8.src,
         ],
-        span: 'lg:col-span-4 lg:col-start-9 md:mt-32'
+        span: "lg:col-span-4 lg:col-start-9 md:mt-32",
     },
     {
-        id: 'brutalist-pavilion',
-        title: 'THE BRUTALIST PAVILION',
-        year: '2024',
-        location: 'BERLÍN',
+        id: "brutalist-pavilion",
+        title: "THE BRUTALIST PAVILION",
+        year: "2024",
+        location: "BERLÍN",
         images: [
-            'https://lh3.googleusercontent.com/aida-public/AB6AXuD4JXV12e-o0YkLfnAT8tTnDlyyOJP5NI1r6vA97mmDXyb6G1xRNfFmN3xnrIq6tpCdDOxwOz8UfLZAJLjMMsMW_FfDpiHc1wpo1yYG2FM7I8LnO7aUXkxsTWHu0p5UbowiVm3rQnQpJmftHnKnAN1LjKDNTZo3B5FG8SCNsUCkIggpbhYGIaked7DhAf2Xkbwcki_EuGqYU6BmajIndLfeA1ZJU2lj9-u8IaHCcaOJZzkHmTNtjf910m8ptGCf_W9SS4Cgy8KjTSCT',
-            'https://lh3.googleusercontent.com/aida-public/AB6AXuBEijYhtNeNQzeV-Dml6bGm_LulqViqceIS69AWqsjnV5OD2Dw_ifXmy-rGk7WMolB05XOSMHTZymou929_OZ5NEwc_gH1fzodia2t45Oe18m-g8WoCC_A_3d0abdtzgAmwepbHf858j1qQBXVF-ZsNMhoqXyW-yvHqGi0zxeCcvgfzQg3ZKoQNyszYONFg3r_5w06yskRZ3l0U2jogXfItS_ohE5TpmCWB7ZluN1iZVV0hI9s_LztY_rJZB5lWlZz7HdEzsM-Us5IM'
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuD4JXV12e-o0YkLfnAT8tTnDlyyOJP5NI1r6vA97mmDXyb6G1xRNfFmN3xnrIq6tpCdDOxwOz8UfLZAJLjMMsMW_FfDpiHc1wpo1yYG2FM7I8LnO7aUXkxsTWHu0p5UbowiVm3rQnQpJmftHnKnAN1LjKDNTZo3B5FG8SCNsUCkIggpbhYGIaked7DhAf2Xkbwcki_EuGqYU6BmajIndLfeA1ZJU2lj9-u8IaHCcaOJZzkHmTNtjf910m8ptGCf_W9SS4Cgy8KjTSCT",
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuBEijYhtNeNQzeV-Dml6bGm_LulqViqceIS69AWqsjnV5OD2Dw_ifXmy-rGk7WMolB05XOSMHTZymou929_OZ5NEwc_gH1fzodia2t45Oe18m-g8WoCC_A_3d0abdtzgAmwepbHf858j1qQBXVF-ZsNMhoqXyW-yvHqGi0zxeCcvgfzQg3ZKoQNyszYONFg3r_5w06yskRZ3l0U2jogXfItS_ohE5TpmCWB7ZluN1iZVV0hI9s_LztY_rJZB5lWlZz7HdEzsM-Us5IM",
         ],
-        span: 'lg:col-span-5 md:mt-[-4rem]'
+        span: "lg:col-span-5 md:mt-[-4rem]",
     },
     {
-        id: 'essence-r',
-        title: 'ESSENCE R',
-        year: '2024',
-        location: 'QUITO',
-        images: [
-            ER1.src,
-            ER2.src,
-            ER3.src,
-            ER4.src,
-            ER5.src,
-            ER6.src
-        ],
-        span: 'lg:col-span-6 lg:col-start-7'
-    }
+        id: "essence-r",
+        title: "ESSENCE R",
+        year: "2024",
+        location: "QUITO",
+        images: [ER1.src, ER2.src, ER3.src, ER4.src, ER5.src, ER6.src],
+        span: "lg:col-span-6 lg:col-start-7",
+    },
 ];
 
 // ... rest of the frontmatter if any ...
@@ -81,25 +74,27 @@ const featuredProjects = [
 <Layout title="Minimal arquitectura | Inicio">
     <!-- Hero Section -->
     <header class="relative h-screen w-full overflow-hidden bg-black">
-        <img
-            class="absolute inset-0 w-full h-full object-cover scale-105 hover:scale-100 transition-all duration-1000"
-            data-alt="monolithic black concrete skyscraper facade against a misty grey morning sky with sharp clean architectural lines and dramatic shadows"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEi4-LT4owAF1NdFRAhzJW8tyz1wIg6qEIGeevKRLRUq65PP1_D1eRCz5Wp1MNR8sAWOm2f2TJTNwiQqDjrFNgKm3DRr40wwZGILMk_cOjJJEmE_6_5HGI8e4HeVJXGKllECSorDqLb7tYFGDXDm5_jnT9Xb_ZEMSm4p2BeIWI8D6MqsU36EIyzAo9F8S7-g5arZnu8vQYoBALnVaj46HqMyJ6W3tZhP3tW53NkPCHrqOkkhDGLboP6-xa_-_rcrBL4RXES423-nkO"
-            alt="monolithic black concrete skyscraper facade"
-        />
+        <div class="absolute inset-0 z-0">
+            <ProjectCarousel
+                images={featuredProjects.map((p) => p.images[0])}
+                id="hero-carousel"
+                columns={1}
+            />
+        </div>
         <div
-            class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent"
+            class="absolute inset-0 z-10 bg-linear-to-t from-stone-950 via-stone-950/20 to-transparent pointer-events-none"
         >
         </div>
         <div
-            class="relative z-10 h-full flex flex-col justify-end px-8 pb-24 max-w-[1920px] mx-auto"
+            class="relative z-20 h-full flex flex-col justify-end px-8 pb-24 max-w-[1920px] mx-auto pointer-events-none"
         >
-            <h1 class="font-headline text-[4.5rem] sm:text-[5rem] md:text-[8rem] lg:text-[10rem] leading-[0.9] md:leading-[0.85] tracking-tighter text-white max-w-5xl uppercase"
+            <h1
+                class="font-headline text-[4.5rem] sm:text-[5rem] md:text-[8rem] lg:text-[10rem] leading-[0.9] md:leading-[0.85] tracking-tighter text-white max-w-5xl uppercase drop-shadow-xl"
+            >
                 Definiendo<br />el vacío.
             </h1>
         </div>
     </header>
-
     <!-- Featured Projects Grid (Intentional Asymmetry) -->
     <section class="pb-40 px-8 max-w-[1920px] mx-auto">
         <div
@@ -107,7 +102,7 @@ const featuredProjects = [
         >
             <div>
                 <h3
-                    class="font-headline text-5xl font-bold tracking-tighter uppercase mt-4"
+                    class="font-headline text-5xl font-bold tracking-tighter uppercase mt-6"
                 >
                     Proyectos
                 </h3>
@@ -116,29 +111,35 @@ const featuredProjects = [
                 href="/proyectos"
                 class="font-label text-[0.8rem] uppercase tracking-widest border-b border-primary pb-2 hover:pr-6 transition-all duration-300 flex items-center group"
             >
-                Ver todos los proyectos <span
+                Ver más proyectos <span
                     class="material-symbols-outlined ml-2 group-hover:rotate-45 transition-transform"
                     >north_east</span
                 >
             </a>
         </div>
         <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-24 md:gap-x-12 lg:gap-x-16 items-start"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-16 md:gap-x-6 lg:gap-x-8 items-start"
         >
-            {featuredProjects.map((project) => (
-                <div class={`${project.span} group block`}>
-                    <div class="relative overflow-hidden bg-surface-container-high aspect-16/10 md:aspect-auto md:h-[600px]">
-                        <ProjectCarousel images={project.images} id={project.id} columns={1} />
-                    </div>
-                    <div class="mt-8 flex justify-between items-start">
-                        <div>
-                            <h4 class="font-headline text-2xl font-bold mb-2 group-hover:text-primary/70 transition-colors">
-                                {project.title}
-                            </h4>
+            {
+                featuredProjects.map((project) => (
+                    <div class={`${project.span} group block`}>
+                        <div class="relative overflow-hidden bg-surface-container-high aspect-16/10 md:aspect-auto md:h-[600px]">
+                            <ProjectCarousel
+                                images={project.images}
+                                id={project.id}
+                                columns={1}
+                            />
+                        </div>
+                        <div class="mt-8 flex justify-between items-start">
+                            <div>
+                                <h4 class="font-headline text-2xl font-bold mb-2 group-hover:text-primary/70 transition-colors">
+                                    {project.title}
+                                </h4>
+                            </div>
                         </div>
                     </div>
-                </div>
-            ))}
+                ))
+            }
         </div>
         <div class="mt-32 flex justify-center">
             <a

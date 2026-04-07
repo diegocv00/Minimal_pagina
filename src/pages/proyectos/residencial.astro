@@ -1,33 +1,33 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ProjectCarousel from '../../components/ProjectCarousel.astro';
+import fondoBanner from '../../assets/fondoBanner.png';
 
-import R1_1 from '../../assets/Residencial1/R1_1.jpeg';
-import R1_2 from '../../assets/Residencial1/R1_2.jpeg';
-import R1_3 from '../../assets/Residencial1/R1_3.jpeg';
-import R1_4 from '../../assets/Residencial1/R1_4.jpeg';
-import R1_5 from '../../assets/Residencial1/R1_5.jpeg';
-import R1_6 from '../../assets/Residencial1/R1_6.jpeg';
-import R1_7 from '../../assets/Residencial1/R1_7.jpeg';
-import R1_8 from '../../assets/Residencial1/R1_8.jpeg';
+import AptoCC_1 from '../../assets/AptoCC/AptoCC_1.jpeg';
+import AptoCC_2 from '../../assets/AptoCC/AptoCC_2.jpeg';
+import AptoCC_3 from '../../assets/AptoCC/AptoCC_3.jpeg';
+import AptoCC_4 from '../../assets/AptoCC/AptoCC_4.jpeg';
+import AptoCC_5 from '../../assets/AptoCC/AptoCC_5.jpeg';
+import AptoCC_6 from '../../assets/AptoCC/AptoCC_6.jpeg';
+import AptoCC_7 from '../../assets/AptoCC/AptoCC_7.jpeg';
+import AptoCC_8 from '../../assets/AptoCC/AptoCC_8.jpeg';
 
-import R2_1 from '../../assets/Residencial2/R2_1.jpeg';
-import R2_2 from '../../assets/Residencial2/R2_2.jpeg';
-import R2_3 from '../../assets/Residencial2/R2_3.jpeg';
-import R2_4 from '../../assets/Residencial2/R2_4.jpeg';
-import R2_5 from '../../assets/Residencial2/R2_5.jpeg';
-import R2_6 from '../../assets/Residencial2/R2_6.jpeg';
-import R2_7 from '../../assets/Residencial2/R2_7.jpeg';
-import R2_8 from '../../assets/Residencial2/R2_8.jpeg';
-import R2_9 from '../../assets/Residencial2/R2_9.jpeg';
-import R2_10 from '../../assets/Residencial2/R2_10.jpeg';
-import R2_11 from '../../assets/Residencial2/R2_11.jpeg';
+import AptoCV_1 from '../../assets/AptoCV/AptoCV_1.jpeg';
+import AptoCV_2 from '../../assets/AptoCV/AptoCV_2.jpeg';
+import AptoCV_3 from '../../assets/AptoCV/AptoCV_3.jpeg';
+import AptoCV_4 from '../../assets/AptoCV/AptoCV_4.jpeg';
+import AptoCV_5 from '../../assets/AptoCV/AptoCV_5.jpeg';
+import AptoCV_6 from '../../assets/AptoCV/AptoCV_6.jpeg';
+import AptoCV_7 from '../../assets/AptoCV/AptoCV_7.jpeg';
+import AptoCV_8 from '../../assets/AptoCV/AptoCV_8.jpeg';
+import AptoCV_9 from '../../assets/AptoCV/AptoCV_9.jpeg';
+import AptoCV_10 from '../../assets/AptoCV/AptoCV_10.jpeg';
  
-import R3_1 from '../../assets/Residencial3/R3_1.jpeg';
-import R3_2 from '../../assets/Residencial3/R3_2.jpeg';
-import R3_3 from '../../assets/Residencial3/R3_3.jpeg';
-import R3_4 from '../../assets/Residencial3/R3_4.jpeg';
-import R3_5 from '../../assets/Residencial3/R3_5.jpeg';
+import Apto602_1 from '../../assets/Apto602/Apto602_1.jpeg';
+import Apto602_2 from '../../assets/Apto602/Apto602_2.jpeg';
+import Apto602_3 from '../../assets/Apto602/Apto602_3.jpeg';
+import Apto602_4 from '../../assets/Apto602/Apto602_4.jpeg';
+import Apto602_5 from '../../assets/Apto602/Apto602_5.jpeg';
 
 interface Project {
     id: string;
@@ -40,53 +40,53 @@ interface Project {
 
 const projects: Project[] = [
     {
-        id: 'residencial-1',
-        title: 'RESIDENCIAL 1',
+        id: 'aptocc',
+        title: 'APARTAMENTO CC',
         location: '', 
-        description: 'Remodelación de un apartamento enfocada en la optimización del espacio y materialidad pura.',
+        description: 'Remodelación de un apartmento enfocada en la optimización del espacio y materialidad pura.',
         images: [
-            R1_1.src,
-            R1_2.src,
-            R1_3.src,
-            R1_4.src,
-            R1_5.src,
-            R1_6.src,
-            R1_7.src,
-            R1_8.src
+            AptoCC_1.src,
+            AptoCC_2.src,
+            AptoCC_3.src,
+            AptoCC_4.src,
+            AptoCC_5.src,
+            AptoCC_6.src,
+            AptoCC_7.src,
+            AptoCC_8.src
         ],
         span: 'md:col-span-10 md:col-start-2'
     },
 
     {
-        id: 'residencial-2',
-        title: 'RESIDENCIAL 2',
+        id: 'aptocv',
+        title: 'APARTAMENTO CV301',
         location: '', 
         description: 'Vivienda unifamiliar con énfasis en la conexión interior-exterior y materialidad contemporánea.',
         images: [
-            R2_1.src,
-            R2_2.src,
-            R2_3.src,
-            R2_4.src,
-            R2_5.src,
-            R2_6.src,
-            R2_7.src,
-            R2_8.src,
-            R2_9.src,
-            R2_10.src
+            AptoCV_1.src,
+            AptoCV_2.src,
+            AptoCV_3.src,
+            AptoCV_4.src,
+            AptoCV_5.src,
+            AptoCV_6.src,
+            AptoCV_7.src,
+            AptoCV_8.src,
+            AptoCV_9.src,
+            AptoCV_10.src
         ],
         span: 'md:col-span-12'
     },
     {
-        id: 'residencial-3',
-        title: 'RESIDENCIAL 3',
+        id: 'apto602',
+        title: 'APARTAMENTO 602',
         location: '', 
         description: 'Vivienda unifamiliar enfocada en la armonía geométrica y materialidad contemporánea.',
         images: [
-            R3_1.src,
-            R3_2.src,
-            R3_3.src,
-            R3_4.src,
-            R3_5.src
+            Apto602_1.src,
+            Apto602_2.src,
+            Apto602_3.src,
+            Apto602_4.src,
+            Apto602_5.src
         ],
         span: 'md:col-span-12'
     }
@@ -139,11 +139,11 @@ const projects: Project[] = [
 
 
         <!-- CTA Section: Minimalist Intervention -->
-        <section class="mt-48 px-8 py-32 bg-stone-950 text-white flex items-center justify-center text-center">
-            <div class="max-w-2xl">
-                <h3 class="font-headline text-4xl font-extrabold uppercase tracking-tighter mb-8 italic">Empieza tu propio proyecto minimalista</h3>
+        <section class="relative mt-48 px-8 py-32 bg-stone-950 text-white flex items-center justify-center text-center bg-cover bg-center" style={`background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${fondoBanner.src});`}>
+            <div class="relative z-10 max-w-2xl">
+                <h3 class="font-headline text-4xl font-extrabold uppercase tracking-tighter mb-8 italic">Empieza tu sueño</h3>
                 <a class="inline-block bg-white text-black px-12 py-5 font-headline font-bold uppercase tracking-widest text-sm hover:bg-stone-200 transition-colors" href="https://wa.me/573008299673">
-                    Consultar Ahora
+                    Cotizar ahora
                 </a>
             </div>
         </section>

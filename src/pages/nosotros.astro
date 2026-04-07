@@ -1,5 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import fondoBanner from "../assets/fondoBanner.png";
 ---
 
 <Layout title="Minimal arquitectura | Nosotros">
@@ -8,16 +9,29 @@ import Layout from '../layouts/Layout.astro';
         <section class="px-8 max-w-[1920px] mx-auto mb-40">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
                 <div class="lg:col-span-7">
-                    <h1 class="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] leading-[1.1] font-bold tracking-tight text-primary mb-8 max-w-2xl font-headline">
+                    <h1
+                        class="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] leading-[1.1] font-bold tracking-tight text-primary mb-8 max-w-2xl font-headline"
+                    >
                         Esculpiendo el vacío, definiendo la permanencia.
                     </h1>
-                    <p class="font-body text-on-surface-variant text-lg max-w-xl leading-relaxed">
-                        Arquitectura de honestidad material y claridad estructural desde 2012.
+                    <p
+                        class="font-body text-on-surface-variant text-lg max-w-xl leading-relaxed"
+                    >
+                        Arquitectura de honestidad material y claridad
+                        estructural desde 2012.
                     </p>
                 </div>
                 <div class="lg:col-span-5 relative">
-                    <img class="w-full aspect-[4/5] object-cover" data-alt="Monolithic concrete building with sharp geometric lines and deep shadows against a clear sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaWEGi6GzES3FLZDMth2WDPopEXJ3zI8wmXOj4uuFlgrxqABH2YEQzMAMSkmGK_qUAOdaSDXUf7-iTMbyR5XHvMtzK2Y6ZSueuwit_5yw_80rjIxZntlB06CBZuGYozmQ2EoHVRfVBV1QhOUonK_P4wAKhvkZ9xrmXwKCoJN3OAEsMg2s3MmikNeNcjGQUERL79sVjc14UsQQLrDWjyJeriRbo4GgVVFiwuDMnqTJbelMfh-pEE-ZJvmMHXxA-5qQ8GMan0lSc17Mt" alt="Monolithic concrete building">
-                    <div class="absolute -bottom-12 -left-12 hidden xl:block w-48 h-48 bg-surface-container-highest"></div>
+                    <img
+                        class="w-full aspect-[4/5] object-cover"
+                        data-alt="Monolithic concrete building with sharp geometric lines and deep shadows against a clear sky"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaWEGi6GzES3FLZDMth2WDPopEXJ3zI8wmXOj4uuFlgrxqABH2YEQzMAMSkmGK_qUAOdaSDXUf7-iTMbyR5XHvMtzK2Y6ZSueuwit_5yw_80rjIxZntlB06CBZuGYozmQ2EoHVRfVBV1QhOUonK_P4wAKhvkZ9xrmXwKCoJN3OAEsMg2s3MmikNeNcjGQUERL79sVjc14UsQQLrDWjyJeriRbo4GgVVFiwuDMnqTJbelMfh-pEE-ZJvmMHXxA-5qQ8GMan0lSc17Mt"
+                        alt="Monolithic concrete building"
+                    />
+                    <div
+                        class="absolute -bottom-12 -left-12 hidden xl:block w-48 h-48 bg-surface-container-highest"
+                    >
+                    </div>
                 </div>
             </div>
         </section>
@@ -27,20 +41,44 @@ import Layout from '../layouts/Layout.astro';
             <div class="px-8 max-w-[1920px] mx-auto">
                 <div class="flex flex-col md:flex-row gap-20">
                     <div class="md:w-1/3">
-                        <span class="font-label uppercase tracking-[0.2em] text-[0.75rem] text-outline font-bold">Nuestra Filosofía</span>
-                        <h2 class="font-headline text-[2rem] sm:text-[2.5rem] font-bold mt-4 leading-tight">La arquitectura como un acto de silencio.</h2>
+                        <span
+                            class="font-label uppercase tracking-[0.2em] text-[0.75rem] text-outline font-bold"
+                            >Nuestra Filosofía</span
+                        >
+                        <h2
+                            class="font-headline text-[2rem] sm:text-[2.5rem] font-bold mt-4 leading-tight"
+                        >
+                            La arquitectura como un acto de silencio.
+                        </h2>
                     </div>
-                    <div class="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-16">
+                    <div
+                        class="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-16"
+                    >
                         <div>
-                            <h3 class="font-headline text-xl font-bold mb-4">Materialidad Radical</h3>
-                            <p class="text-on-surface-variant leading-relaxed">Expresión pura de hormigón, acero y vidrio en diálogo con la luz.</p>
+                            <h3 class="font-headline text-xl font-bold mb-4">
+                                Materialidad Radical
+                            </h3>
+                            <p class="text-on-surface-variant leading-relaxed">
+                                Expresión pura de hormigón, acero y vidrio en
+                                diálogo con la luz.
+                            </p>
                         </div>
                         <div>
-                            <h3 class="font-headline text-xl font-bold mb-4">Sostenibilidad Estructural</h3>
-                            <p class="text-on-surface-variant leading-relaxed">Diseños atemporales enfocados en durabilidad e integración climática pasiva.</p>
+                            <h3 class="font-headline text-xl font-bold mb-4">
+                                Sostenibilidad Estructural
+                            </h3>
+                            <p class="text-on-surface-variant leading-relaxed">
+                                Diseños atemporales enfocados en durabilidad e
+                                integración climática pasiva.
+                            </p>
                         </div>
                         <div class="md:col-span-2 mt-8">
-                            <img class="w-full h-[400px] object-cover" data-alt="Minimalist interior hallway with dramatic natural lighting casting rhythmic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfceFefFVfaiQWYzI-a1ehhHhlSd15PlXQBO62EFuADfNc_AQFo7Ep7QQfz9dLbOPa5KHslF-q1yCeHX5PckaHb2saqIZ2dbi8Clz_mhBBYddzqc24jLwsO_BqwnhMeThsgoZKvtQoyWmmUB1ogi1AoVNjJDNlR-d8Q1SQ6Qa8yN2RO9T1SMeDMBh1Ego3FwePPkxifaZ5GBdk_cTl7lIXBHCcyw2dLn24jsNCrSZC3_ZLuy6Zgc2tBdcAgwjFuJpwDBTyk-q5nbqQ" alt="Minimalist interior hallway">
+                            <img
+                                class="w-full h-[400px] object-cover"
+                                data-alt="Minimalist interior hallway with dramatic natural lighting casting rhythmic shadows"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfceFefFVfaiQWYzI-a1ehhHhlSd15PlXQBO62EFuADfNc_AQFo7Ep7QQfz9dLbOPa5KHslF-q1yCeHX5PckaHb2saqIZ2dbi8Clz_mhBBYddzqc24jLwsO_BqwnhMeThsgoZKvtQoyWmmUB1ogi1AoVNjJDNlR-d8Q1SQ6Qa8yN2RO9T1SMeDMBh1Ego3FwePPkxifaZ5GBdk_cTl7lIXBHCcyw2dLn24jsNCrSZC3_ZLuy6Zgc2tBdcAgwjFuJpwDBTyk-q5nbqQ"
+                                alt="Minimalist interior hallway"
+                            />
                         </div>
                     </div>
                 </div>
@@ -50,43 +88,85 @@ import Layout from '../layouts/Layout.astro';
         <!-- The Team Section -->
         <section class="py-40 px-8 max-w-[1920px] mx-auto">
             <div class="mb-24 flex justify-between items-end">
-                <h2 class="font-headline text-[2.5rem] sm:text-[3rem] font-bold tracking-tight">El Equipo</h2>
-                <span class="font-label uppercase tracking-[0.2em] text-[0.75rem] text-outline mb-4">Mentes Creativas</span>
+                <h2
+                    class="font-headline text-[2.5rem] sm:text-[3rem] font-bold tracking-tight"
+                >
+                    El equipo
+                </h2>
+                <span
+                    class="font-label uppercase tracking-[0.2em] text-[0.75rem] text-outline mb-4"
+                    >Mentes Creativas</span
+                >
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-24 gap-x-12">
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-24 gap-x-12"
+            >
                 <!-- Member 1 -->
                 <div class="group">
                     <div class="bg-surface-container-high mb-8 overflow-hidden">
-                        <img class="w-full aspect-[3/4] object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105" data-alt="Professional portrait of a male architect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1sN5vvjQEvp-N6xDkzKiKjRaSULmtJlBbNV1FDLO0OZAe-FBWqnGma0IMJPzxW9gMkPL77WWaDQv9RrPC8aa4y_DSIskee1GuVsgeJ1iaJdDuJyPtH5p_Vx5oAnu_SP2Q4V1HagHDMOwq00XMsb_LeGMxfhqr8nZQM4VjgnGiu5SsWP5DSkLgdnvvRzx3f7FRfaszqGNXUjpQmt5bYZr33AvN8UvnVs5fH76SYLaD16NtYvcfPKXs9AoK4RwbNzeZLnOgZiP3UmtL" alt="Julian Rossi">
+                        <img
+                            class="w-full aspect-[3/4] object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                            data-alt="Professional portrait of a male architect"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1sN5vvjQEvp-N6xDkzKiKjRaSULmtJlBbNV1FDLO0OZAe-FBWqnGma0IMJPzxW9gMkPL77WWaDQv9RrPC8aa4y_DSIskee1GuVsgeJ1iaJdDuJyPtH5p_Vx5oAnu_SP2Q4V1HagHDMOwq00XMsb_LeGMxfhqr8nZQM4VjgnGiu5SsWP5DSkLgdnvvRzx3f7FRfaszqGNXUjpQmt5bYZr33AvN8UvnVs5fH76SYLaD16NtYvcfPKXs9AoK4RwbNzeZLnOgZiP3UmtL"
+                            alt="Julian Rossi"
+                        />
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
-                            <h4 class="font-headline text-xl font-bold">Julian Rossi</h4>
-                            <p class="font-label uppercase tracking-widest text-[0.65rem] text-outline mt-1">Socio Fundador</p>
+                            <h4 class="font-headline text-xl font-bold">
+                                Julian Rossi
+                            </h4>
+                            <p
+                                class="font-label uppercase tracking-widest text-[0.65rem] text-outline mt-1"
+                            >
+                                Socio Fundador
+                            </p>
                         </div>
                     </div>
                 </div>
                 <!-- Member 2 -->
                 <div class="group mt-12 md:mt-24">
                     <div class="bg-surface-container-high mb-8 overflow-hidden">
-                        <img class="w-full aspect-[3/4] object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105" data-alt="Minimalist portrait of a female lead architect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmSVTkPM7QV6WULbhJRTp11dtVueZadF1KHJva6bFOkDTy9THjkbd1WKuk2dMEW6A3DfsZAmMy0CC1VdTFuAfVKRLMyhjqNp3S2IRrpI1k1zGydFTSzRkOyMSnStz58VyXC7Ge7-62r6UfLVMyEsNtev8857XRqSQW2ZJ7xHz1DMuhNfYzecLhs9355VA-7taz5CoBRU9KXTuS_OTSYGvmm9UwEqoEnaqdWHeq2RzNMRSdlNJrtqI1vW9w-J7ZziIRophL4ekzNPY4" alt="Elena Vance">
+                        <img
+                            class="w-full aspect-[3/4] object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                            data-alt="Minimalist portrait of a female lead architect"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmSVTkPM7QV6WULbhJRTp11dtVueZadF1KHJva6bFOkDTy9THjkbd1WKuk2dMEW6A3DfsZAmMy0CC1VdTFuAfVKRLMyhjqNp3S2IRrpI1k1zGydFTSzRkOyMSnStz58VyXC7Ge7-62r6UfLVMyEsNtev8857XRqSQW2ZJ7xHz1DMuhNfYzecLhs9355VA-7taz5CoBRU9KXTuS_OTSYGvmm9UwEqoEnaqdWHeq2RzNMRSdlNJrtqI1vW9w-J7ZziIRophL4ekzNPY4"
+                            alt="Elena Vance"
+                        />
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
-                            <h4 class="font-headline text-xl font-bold">Elena Vance</h4>
-                            <p class="font-label uppercase tracking-widest text-[0.65rem] text-outline mt-1">Directora Técnica</p>
+                            <h4 class="font-headline text-xl font-bold">
+                                Elena Vance
+                            </h4>
+                            <p
+                                class="font-label uppercase tracking-widest text-[0.65rem] text-outline mt-1"
+                            >
+                                Directora Técnica
+                            </p>
                         </div>
                     </div>
                 </div>
                 <!-- Member 3 -->
                 <div class="group">
                     <div class="bg-surface-container-high mb-8 overflow-hidden">
-                        <img class="w-full aspect-[3/4] object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105" data-alt="Portrait of a male urban planner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo4BVe3XzZMpVxS7QWNJcs71PHxczMg4vtPt2zX0DdPZoMryaJ_0nBnAiSGbmxf8duJiKZY8KVu60OxvgJuZK8NSjabSFkSfCisWq-wh36viqjZ-qAmcBMl1m6n6zEHJBX1P5LNrL67Sk_cenSeVfVgo79pKlbXutIZIU2VIer5SlmsRcqqNKGtejjpO8Cmx4CfwAX9SoihWIRXE4PsulEuiwLCcVLmvHtDlRYggR1ifhQ6ov5SUIAHwDJLwf6LBs0Puwm1xQjY9ne" alt="Marco Kael">
+                        <img
+                            class="w-full aspect-[3/4] object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                            data-alt="Portrait of a male urban planner"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo4BVe3XzZMpVxS7QWNJcs71PHxczMg4vtPt2zX0DdPZoMryaJ_0nBnAiSGbmxf8duJiKZY8KVu60OxvgJuZK8NSjabSFkSfCisWq-wh36viqjZ-qAmcBMl1m6n6zEHJBX1P5LNrL67Sk_cenSeVfVgo79pKlbXutIZIU2VIer5SlmsRcqqNKGtejjpO8Cmx4CfwAX9SoihWIRXE4PsulEuiwLCcVLmvHtDlRYggR1ifhQ6ov5SUIAHwDJLwf6LBs0Puwm1xQjY9ne"
+                            alt="Marco Kael"
+                        />
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
-                            <h4 class="font-headline text-xl font-bold">Marco Kael</h4>
-                            <p class="font-label uppercase tracking-widest text-[0.65rem] text-outline mt-1">Estrategia Urbana</p>
+                            <h4 class="font-headline text-xl font-bold">
+                                Marco Kael
+                            </h4>
+                            <p
+                                class="font-label uppercase tracking-widest text-[0.65rem] text-outline mt-1"
+                            >
+                                Estrategia Urbana
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -96,39 +176,72 @@ import Layout from '../layouts/Layout.astro';
         <!-- Quote Section -->
         <section class="py-40 bg-primary text-on-primary">
             <div class="px-8 max-w-[1920px] mx-auto text-center">
-                <p class="font-headline text-[2rem] sm:text-[3rem] md:text-[4rem] leading-none font-extralight tracking-tighter italic">
-                    "La arquitectura es la voluntad de una época traducida a espacio."
+                <p
+                    class="font-headline text-[2rem] sm:text-[3rem] md:text-[4rem] leading-none font-extralight tracking-tighter italic"
+                >
+                    "La arquitectura es la voluntad de una época traducida a
+                    espacio."
                 </p>
-                <p class="font-label uppercase tracking-[0.4em] text-[0.75rem] mt-12 opacity-60">Mies van der Rohe</p>
+                <p
+                    class="font-label uppercase tracking-[0.4em] text-[0.75rem] mt-12 opacity-60"
+                >
+                    Mies van der Rohe
+                </p>
             </div>
         </section>
 
         <!-- Stats Bento Grid -->
         <section class="py-40 px-8 max-w-[1920px] mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="bg-surface-container p-12 flex flex-col justify-between aspect-square md:col-span-2 lg:col-span-1 border border-outline-variant/30">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div
+                    class="bg-surface-container p-12 flex flex-col justify-between aspect-square md:col-span-2 lg:col-span-1 border border-outline-variant/30"
+                >
                     <span class="font-headline text-6xl font-bold">12</span>
-                    <p class="font-label uppercase tracking-widest text-outline text-sm">Años de trayectoria</p>
+                    <p
+                        class="font-label uppercase tracking-widest text-outline text-sm"
+                    >
+                        Años de trayectoria
+                    </p>
                 </div>
-                <div class="bg-surface-container-lowest p-12 flex flex-col justify-between aspect-square border border-outline-variant/30">
+                <div
+                    class="bg-surface-container-lowest p-12 flex flex-col justify-between aspect-square border border-outline-variant/30"
+                >
                     <span class="font-headline text-6xl font-bold">85</span>
-                    <p class="font-label uppercase tracking-widest text-outline text-sm">Proyectos completados</p>
+                    <p
+                        class="font-label uppercase tracking-widest text-outline text-sm"
+                    >
+                        Proyectos completados
+                    </p>
                 </div>
-                <div class="bg-primary text-on-primary p-12 flex flex-col justify-between aspect-square md:col-span-2 lg:col-span-1">
+                <div
+                    class="bg-primary text-on-primary p-12 flex flex-col justify-between aspect-square md:col-span-2 lg:col-span-1"
+                >
                     <span class="font-headline text-6xl font-bold">14</span>
-                    <p class="font-label uppercase tracking-widest text-on-primary opacity-60 text-sm">Premios internacionales</p>
-                </div>
-                <div class="bg-surface-container p-12 flex flex-col justify-between aspect-square border border-outline-variant/30">
-                    <span class="font-headline text-6xl font-bold">06</span>
-                    <p class="font-label uppercase tracking-widest text-outline text-sm">Países intervenidos</p>
+                    <p
+                        class="font-label uppercase tracking-widest text-on-primary opacity-60 text-sm"
+                    >
+                        Metros cuadrados construidos
+                    </p>
                 </div>
             </div>
         </section>
 
         <!-- Call to Action -->
-        <section class="py-40 bg-stone-950 text-white text-center px-8">
-            <h4 class="font-headline text-[2rem] sm:text-[3rem] font-bold mb-12 uppercase tracking-tighter italic">¿Tienes un proyecto en mente?</h4>
-            <a class="px-12 py-6 bg-white text-black font-label text-[0.8rem] font-bold uppercase tracking-[0.2em] transition-all hover:bg-stone-200" href="https://wa.me/573008299673">Empieza ahora</a>
+        <section
+            class="relative py-40 bg-stone-950 text-white text-center px-8 bg-cover bg-center"
+            style={`background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${fondoBanner.src});`}
+        >
+            <div class="relative z-10">
+                <h4
+                    class="font-headline text-[2rem] sm:text-[3rem] font-bold mb-12 uppercase tracking-tighter italic"
+                >
+                    ¿Tienes un proyecto en mente?
+                </h4>
+                <a
+                    class="px-12 py-6 bg-white text-black font-label text-[0.8rem] font-bold uppercase tracking-[0.2em] transition-all hover:bg-stone-200"
+                    href="https://wa.me/573008299673">Cotiza ahora</a
+                >
+            </div>
         </section>
     </main>
 </Layout>

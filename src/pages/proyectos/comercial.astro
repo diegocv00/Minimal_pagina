@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ProjectCarousel from '../../components/ProjectCarousel.astro';
+import fondoBanner from '../../assets/fondoBanner.png';
 
 import ER1 from '../../assets/Essence_R/ER1.jpeg';
 import ER2 from '../../assets/Essence_R/ER2.jpeg';
@@ -54,10 +55,10 @@ const projects: Project[] = [
         images: [
             ER1.src,
             ER2.src,
-            ER3.src,
+            ER6.src,
             ER4.src,
             ER5.src,
-            ER6.src
+            ER3.src
         ],
         span: 'md:col-span-7'
     }
@@ -110,8 +111,8 @@ const projects: Project[] = [
 
 
         <!-- CTA Section -->
-        <section class="py-32 px-8 bg-surface-container-highest mt-24">
-            <div class="max-w-[1920px] mx-auto flex flex-col items-center text-center">
+        <section class="relative py-32 px-8 mt-24 text-white bg-stone-950 bg-cover bg-center" style={`background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${fondoBanner.src});`}>
+            <div class="relative z-10 max-w-[1920px] mx-auto flex flex-col items-center text-center">
                 <h2 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter mb-8 uppercase">Construyendo el futuro.</h2>
                 <a href="https://wa.me/573008299673" class="bg-primary text-on-primary px-12 py-5 font-headline font-bold text-[0.75rem] uppercase tracking-widest hover:bg-stone-800 transition-colors duration-300">
                     Cotizar Proyecto
