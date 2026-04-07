@@ -67,8 +67,58 @@
                 href="/nosotros">Nosotros</a
             >
         </div>
-        <button class="md:hidden text-stone-950 dark:text-stone-50">
-            <span class="material-symbols-outlined">menu</span>
+        <button id="menu-toggle" class="md:hidden text-stone-950 dark:text-stone-50 z-50 relative pointer-events-auto">
+            <span class="material-symbols-outlined text-2xl transition-transform duration-300">menu</span>
         </button>
     </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div 
+        id="mobile-menu" 
+        class="fixed inset-0 bg-white dark:bg-stone-950 z-40 transform translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col justify-center items-center gap-12"
+    >
+        <a href="/" class="font-headline text-4xl uppercase tracking-[0.2em] font-extrabold hover:text-stone-500 transition-colors">Inicio</a>
+        <a href="/proyectos" class="font-headline text-4xl uppercase tracking-[0.2em] font-extrabold hover:text-stone-500 transition-colors">Proyectos</a>
+        <a href="/nosotros" class="font-headline text-4xl uppercase tracking-[0.2em] font-extrabold hover:text-stone-500 transition-colors">Nosotros</a>
+        
+        <div class="mt-8 flex gap-8">
+            <a href="https://www.instagram.com/minimal_bga/" class="text-stone-950 dark:text-stone-50">
+                <span class="material-symbols-outlined text-3xl">share</span>
+            </a>
+            <a href="https://wa.me/573008299673" class="text-stone-950 dark:text-stone-50">
+                <span class="material-symbols-outlined text-3xl">chat</span>
+            </a>
+        </div>
+    </div>
 </nav>
+
+<script is:inline>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = menuToggle?.querySelector('.material-symbols-outlined');
+    let isMenuOpen = false;
+
+    menuToggle?.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+            mobileMenu?.classList.remove('translate-x-full');
+            if (menuIcon) menuIcon.textContent = 'close';
+            document.body.style.overflow = 'hidden';
+        } else {
+            mobileMenu?.classList.add('translate-x-full');
+            if (menuIcon) menuIcon.textContent = 'menu';
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close menu when a link is clicked
+    const mobileLinks = mobileMenu?.querySelectorAll('a');
+    mobileLinks?.forEach(link => {
+        link.addEventListener('click', () => {
+            isMenuOpen = false;
+            mobileMenu?.classList.add('translate-x-full');
+            if (menuIcon) menuIcon.textContent = 'menu';
+            document.body.style.overflow = '';
+        });
+    });
+</script>
