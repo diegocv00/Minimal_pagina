@@ -1,0 +1,122 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProjectCarousel from '../../components/ProjectCarousel.astro';
+
+import ER1 from '../../assets/Essence_R/ER1.jpeg';
+import ER2 from '../../assets/Essence_R/ER2.jpeg';
+import ER3 from '../../assets/Essence_R/ER3.jpeg';
+import ER4 from '../../assets/Essence_R/ER4.jpeg';
+import ER5 from '../../assets/Essence_R/ER5.jpeg';
+import ER6 from '../../assets/Essence_R/ER6.jpeg';
+
+interface Project {
+    id: string;
+    title: string;
+    location: string;
+    description: string;
+    category: string;
+    images: string[];
+    span: string;
+}
+
+const projects: Project[] = [
+    {
+        id: 'axis-tower',
+        title: 'TORRE AXIS',
+        location: 'FRÁNCFORT, DE / 2023',
+        description: 'Intervención urbana de alta densidad y atmósfera corporativa.',
+        category: 'Sector Comercial',
+        images: [
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuCys2C236QTQnFrau5CINKZFL578Hm5-QxPExPDtSpG7QmnCu6ws-hJdDZO-DCWmfUZRFzZwcwtDwd01dWVFkgQnznPtkSfEamZc-QqOiTycW1keOlhD7cuFk_IjYmaBXXJsdNq-MUjm6VaUMqTROcJw47hSVrDDT5p-9yQHSRcsid6QpK2ocFmIFqcGBc2kQfSMaqgnbnRoFXUPGCvRXFK8rcGhKPRviTuivXc9bkZ935cGIWcGDeG2NNpxKnCL2PLfRQaDVrnTbYS',
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuDnmM0Yk0fdyn4cccA7B5iPVRKMUF1KvtV63r6wbpDSBMsbtjTeZbZPyHPi6rNECWbeosRTaQdqzWzPqK4doI7ogJD2Xefq7pFHBA0Tb2nEAOs1-5fI3Gn9pKVmrlf2tTZfo2fzioV51wyaaGbjwvM04qSqVWV0GX5NNVA5E_i_6XBniF8tNoBYCZlUhyFjEN6qh9Vym8b5-xiINtF3KEljmoOI0qIZqN0EVrTfmwRELqzRro63Ex5tH5cNxng3ZzO2qCUTpgTIMk7b',
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuDflpv3Tydz4bEPDYg4g1ZJCWVU2eDTXuppU6YIaUwff58wtc-S2nGEjRy0-pTfip6tzIyaSwNnkQW4WDl-6sp-YQrdKW2FIx4sUs3YOjZXqejNxlGA_6Ut0nh96_jetaccvqdXjSIll7zFqJGlKOofIlXgmq7BnMszkvZ7hdPCjT2ywEl_w8c6J3vxE9zGcPfiPZHaKu5z1PI-WNpUqT77udMIXTdfRmX3gqS4xL47VhG4Tn4b2EbBt0-_SqwBp9FOhqQiHgX6MvIr'
+        ],
+        span: 'md:col-span-10 md:col-start-2'
+    },
+    {
+        id: 'atrio-offices',
+        title: 'OFICINAS EL ATRIO',
+        location: 'MADRID, ES / 2022',
+        description: 'Monolito de espacio de trabajo con claridad estructural.',
+        category: 'Diseño de Trabajo',
+        images: [
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuDnmM0Yk0fdyn4cccA7B5iPVRKMUF1KvtV63r6wbpDSBMsbtjTeZbZPyHPi6rNECWbeosRTaQdqzWzPqK4doI7ogJD2Xefq7pFHBA0Tb2nEAOs1-5fI3Gn9pKVmrlf2tTZfo2fzioV51wyaaGbjwvM04qSqVWV0GX5NNVA5E_i_6XBniF8tNoBYCZlUhyFjEN6qh9Vym8b5-xiINtF3KEljmoOI0qIZqN0EVrTfmwRELqzRro63Ex5tH5cNxng3ZzO2qCUTpgTIMk7b',
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuAfceFefFVfaiQWYzI-a1ehhHhlSd15PlXQBO62EFuADfNc_AQFo7Ep7QQfz9dLbOPa5KHslF-q1yCeHX5PckaHb2saqIZ2dbi8Clz_mhBBYddzqc24jLwsO_BqwnhMeThsgoZKvtQoyWmmUB1ogi1AoVNjJDNlR-d8Q1SQ6Qa8yN2RO9T1SMeDMBh1Ego3FwePPkxifaZ5GBdk_cTl7lIXBHCcyw2dLn24jsNCrSZC3_ZLuy6Zgc2tBdcAgwjFuJpwDBTyk-q5nbqQ'
+        ],
+        span: 'md:col-span-5'
+    },
+    {
+        id: 'essence-r',
+        title: 'ESSENCE R',
+        location: 'QUITO, EC / 2024',
+        description: 'Remodelación de spa enfocada en la serenidad sensorial y minimalismo táctil.',
+        category: 'Wellness / Spa',
+        images: [
+            ER1.src,
+            ER2.src,
+            ER3.src,
+            ER4.src,
+            ER5.src,
+            ER6.src
+        ],
+        span: 'md:col-span-7'
+    }
+];
+---
+
+<Layout title="Minimal arquitectura | Comercial">
+    <main class="pt-32 pb-24">
+        <!-- Header Section -->
+        <header class="px-8 mb-24 max-w-[1920px] mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+                <div class="max-w-2xl">
+                    <span class="font-label text-[1rem] uppercase tracking-[0.2em] text-outline mb-4 block"> Sector</span>
+                    <h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter leading-none mb-6">COMERCIAL</h1>
+                </div>
+                <div class="md:w-1/3">
+                    <p class="font-body text-lg text-on-surface-variant leading-relaxed font-light">
+                        Una selección curada de intervenciones urbanas de alta densidad, atmósferas comerciales y monolitos de espacio de trabajo cristalinos.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Projects: Full-Width Sections -->
+        <div>
+            {projects.map((project) => (
+                <section class="mb-20 md:mb-32 overflow-hidden">
+                    <!-- Global Image Block -->
+                    <div class="w-full relative bg-stone-100 aspect-video md:aspect-21/9">
+                        <ProjectCarousel images={project.images} id={project.id} />
+                    </div>
+                    
+                    <!-- Global Info Block -->
+                    <div class="w-full mt-6 md:mt-8 px-8">
+                        <div class="grid grid-cols-1 md:grid-cols-12">
+                            <div class="md:col-span-12">
+                                <h2 class="font-headline text-3xl md:text-4xl font-extrabold uppercase tracking-tighter mb-4 leading-none">
+                                    {project.title}
+                                </h2>
+                                <p class="font-body text-[0.95rem] md:text-lg text-on-surface-variant leading-relaxed opacity-80 max-w-none">
+                                    {project.description}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            ))}
+        </div>
+
+
+
+        <!-- CTA Section -->
+        <section class="py-32 px-8 bg-surface-container-highest mt-24">
+            <div class="max-w-[1920px] mx-auto flex flex-col items-center text-center">
+                <h2 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter mb-8 uppercase">Construyendo el futuro.</h2>
+                <a href="https://wa.me/573008299673" class="bg-primary text-on-primary px-12 py-5 font-headline font-bold text-[0.75rem] uppercase tracking-widest hover:bg-stone-800 transition-colors duration-300">
+                    Cotizar Proyecto
+                </a>
+            </div>
+        </section>
+    </main>
+</Layout>

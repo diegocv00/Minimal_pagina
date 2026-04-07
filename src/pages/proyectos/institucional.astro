@@ -1,0 +1,110 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProjectCarousel from '../../components/ProjectCarousel.astro';
+
+interface Project {
+    id: string;
+    title: string;
+    location: string;
+    description: string;
+    category: string;
+    images: string[];
+    span: string;
+}
+
+const projects: Project[] = [
+    {
+        id: 'museum-concrete',
+        title: 'MUSEO NACIONAL DEL CONCRETO',
+        location: 'Varsovia, Polonia · 2022',
+        description: 'Exploración de la materialidad cruda del agregado expuesto en un foro público masivo.',
+        category: 'Institucional / Cultura',
+        images: [
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuBEijYhtNeNQzeV-Dml6bGm_LulqViqceIS69AWqsjnV5OD2Dw_ifXmy-rGk7WMolB05XOSMHTZymou929_OZ5NEwc_gH1fzodia2t45Oe18m-g8WoCC_A_3d0abdtzgAmwepbHf858j1qQBXVF-ZsNMhoqXyW-yvHqGi0zxeCcvgfzQg3ZKoQNyszYONFg3r_5w06yskRZ3l0U2jogXfItS_ohE5TpmCWB7ZluN1iZVV0hI9s_LztY_rJZB5lWlZz7HdEzsM-Us5IM',
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuDHR_Egm44jlESDowuHEarjHFr4XfU0ryoLvP4b7UITfx7HYGHMhvj9Q3CE_nvv4nj3Gxb-QKxeO1OcfL32KrxgbCzKPzJ9rIeLtG48xGUjcfJJ6AGRGNs_CvBQgmbM5J5ZmimplXE0JvBAJfPKaP7xMViIPwBA4ijtXv1ZsE9KD0VgT1nC1dnuOt8P7agF9aXIE9RaZXZdMSQCn6SnJZnY7bnCSKRpyIFDySOJSr8Mv2gyTlb_JDAzsnVKOJDHKJCzZbTHwaWu8KBC',
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuDjG8viGwy_hwoYVELynr_9zB1jKFaF0ftGbmq5eiiIvef7-Dk9qeTlpyEdrbTWQt6wfQh1JhErfdl8PZtz8nTnikMl8PV95QMCrDOtwUljkR0h8rBXyxxhGPBCQQmDWddr0gNwkiSNbadsDxbZzEELGBoz14W8VWwtGJDE5DdW2lDcwjqMUOD9lfPaBJY-tRFMze1wxSsiOpgxjnPQ1auvT8yBhGeL96h6OMnDiAU3kriAlimNtROTUfSFGj8QNUOtZ1NqOONuoPSp'
+        ],
+        span: 'md:col-span-10 md:col-start-2'
+    },
+    {
+        id: 'arts-faculty',
+        title: 'FACULTAD DE ARTES',
+        location: 'Lyon, Francia · 2021',
+        description: 'Torre de hormigón que redefine el paisaje académico a través de la verticalidad.',
+        category: 'Educación',
+        images: [
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuDHR_Egm44jlESDowuHEarjHFr4XfU0ryoLvP4b7UITfx7HYGHMhvj9Q3CE_nvv4nj3Gxb-QKxeO1OcfL32KrxgbCzKPzJ9rIeLtG48xGUjcfJJ6AGRGNs_CvBQgmbM5J5ZmimplXE0JvBAJfPKaP7xMViIPwBA4ijtXv1ZsE9KD0VgT1nC1dnuOt8P7agF9aXIE9RaZXZdMSQCn6SnJZnY7bnCSKRpyIFDySOJSr8Mv2gyTlb_JDAzsnVKOJDHKJCzZbTHwaWu8KBC',
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuDxRi7J4NCghJZAJk7L3Ds9WRHbq564Jk9RvBwnJxFh4qVzQHBqQy9HhFDtPcnDbNkToE-mBZLjChlhVHJVI5Zeu074lpMGiJ3uKKfCdq7T22xbjKradVUb6ceCl4tjZRckXPYf4oTLaSc1pQCR0Zn6aT8-boy8lB7cO6rqqt5Q40wQHXjMWBjlOU5lQ0YCJYXpdl-btqwqSxeq0b0vevqzWWWU06n6VVy5kmISOwCQiZ6S2oSqtPY8zY5XJjMJRWLi5IdnzQ1BupaT'
+        ],
+        span: 'md:col-span-6 lg:col-span-4'
+    },
+    {
+        id: 'secondary-school',
+        title: 'SECUNDARIA SAINT-ETIENNE',
+        location: 'Bruselas, Bélgica · 2023',
+        description: 'Espacios de aprendizaje fundados en la luz cenital y patios de hormigón.',
+        category: 'Educación',
+        images: [
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuDjG8viGwy_hwoYVELynr_9zB1jKFaF0ftGbmq5eiiIvef7-Dk9qeTlpyEdrbTWQt6wfQh1JhErfdl8PZtz8nTnikMl8PV95QMCrDOtwUljkR0h8rBXyxxhGPBCQQmDWddr0gNwkiSNbadsDxbZzEELGBoz14W8VWwtGJDE5DdW2lDcwjqMUOD9lfPaBJY-tRFMze1wxSsiOpgxjnPQ1auvT8yBhGeL96h6OMnDiAU3kriAlimNtROTUfSFGj8QNUOtZ1NqOONuoPSp',
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuDxRi7J4NCghJZAJk7L3Ds9WRHbq564Jk9RvBwnJxFh4qVzQHBqQy9HhFDtPcnDbNkToE-mBZLjChlhVHJVI5Zeu074lpMGiJ3uKKfCdq7T22xbjKradVUb6ceCl4tjZRckXPYf4oTLaSc1pQCR0Zn6aT8-boy8lB7cO6rqqt5Q40wQHXjMWBjlOU5lQ0YCJYXpdl-btqwqSxeq0b0vevqzWWWU06n6VVy5kmISOwCQiZ6S2oSqtPY8zY5XJjMJRWLi5IdnzQ1BupaT'
+        ],
+        span: 'md:col-span-6 lg:col-span-8'
+    }
+];
+---
+
+<Layout title="Minimal arquitectura | Institucional">
+    <main class="pt-32 pb-24">
+        <!-- Hero Header -->
+        <header class="px-8 mb-24 max-w-[1920px] mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+                <div class="max-w-4xl">
+                    <p class="font-label text-[1rem] mb-4 text-outline uppercase tracking-widest"> Sector</p>
+                    <h1 class="font-headline text-[3.5rem] leading-[1.1] font-extrabold tracking-tighter uppercase">INSTITUCIONAL</h1>
+                </div>
+                <div class="max-w-sm">
+                    <p class="font-body text-lg text-on-surface-variant leading-relaxed">
+                        Una curación de espacios públicos donde el concreto se encuentra con la comunidad. Nuestro trabajo institucional explora el brutalismo a través de la lente de la utilidad cívica moderna.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Projects: Full-Width Sections -->
+        <div>
+            {projects.map((project) => (
+                <section class="mb-20 md:mb-32 overflow-hidden">
+                    <!-- Global Image Block -->
+                    <div class="w-full relative bg-stone-100 aspect-video md:aspect-21/9">
+                        <ProjectCarousel images={project.images} id={project.id} />
+                    </div>
+                    
+                    <!-- Global Info Block -->
+                    <div class="w-full mt-6 md:mt-8 px-8">
+                        <div class="grid grid-cols-1 md:grid-cols-12">
+                            <div class="md:col-span-12">
+                                <h2 class="font-headline text-3xl md:text-4xl font-extrabold uppercase tracking-tighter mb-4 leading-none">
+                                    {project.title}
+                                </h2>
+                                <p class="font-body text-[0.95rem] md:text-lg text-on-surface-variant leading-relaxed opacity-80 max-w-none">
+                                    {project.description}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            ))}
+        </div>
+
+
+
+        <!-- Call to Action -->
+        <section class="py-40 px-8 text-center max-w-4xl mx-auto">
+            <h4 class="font-headline text-[3.5rem] leading-[1.1] font-bold uppercase mb-12 tracking-tight">Construye Firmes <br/>Cimientos para el Futuro.</h4>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a class="px-10 py-5 bg-primary text-on-primary uppercase font-label text-[0.75rem] font-bold tracking-[0.2em] transition-all duration-300 hover:scale-105" href="https://wa.me/573008299673">Iniciar un Proyecto</a>
+                <a class="px-10 py-5 border border-primary text-primary uppercase font-label text-[0.75rem] font-bold tracking-[0.2em] transition-all duration-300 hover:bg-primary hover:text-on-primary" href="/proyectos">Ver Portafolio</a>
+            </div>
+        </section>
+    </main>
+</Layout>

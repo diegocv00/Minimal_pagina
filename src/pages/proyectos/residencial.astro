@@ -1,0 +1,153 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProjectCarousel from '../../components/ProjectCarousel.astro';
+
+import R1_1 from '../../assets/Residencial1/R1_1.jpeg';
+import R1_2 from '../../assets/Residencial1/R1_2.jpeg';
+import R1_3 from '../../assets/Residencial1/R1_3.jpeg';
+import R1_4 from '../../assets/Residencial1/R1_4.jpeg';
+import R1_5 from '../../assets/Residencial1/R1_5.jpeg';
+import R1_6 from '../../assets/Residencial1/R1_6.jpeg';
+import R1_7 from '../../assets/Residencial1/R1_7.jpeg';
+import R1_8 from '../../assets/Residencial1/R1_8.jpeg';
+
+import R2_1 from '../../assets/Residencial2/R2_1.jpeg';
+import R2_2 from '../../assets/Residencial2/R2_2.jpeg';
+import R2_3 from '../../assets/Residencial2/R2_3.jpeg';
+import R2_4 from '../../assets/Residencial2/R2_4.jpeg';
+import R2_5 from '../../assets/Residencial2/R2_5.jpeg';
+import R2_6 from '../../assets/Residencial2/R2_6.jpeg';
+import R2_7 from '../../assets/Residencial2/R2_7.jpeg';
+import R2_8 from '../../assets/Residencial2/R2_8.jpeg';
+import R2_9 from '../../assets/Residencial2/R2_9.jpeg';
+import R2_10 from '../../assets/Residencial2/R2_10.jpeg';
+import R2_11 from '../../assets/Residencial2/R2_11.jpeg';
+
+interface Project {
+    id: string;
+    title: string;
+    location: string;
+    description: string;
+    images: string[];
+    span: string;
+}
+
+const projects: Project[] = [
+    {
+        id: 'residencial-1',
+        title: 'RESIDENCIAL 1',
+        location: '', 
+        description: 'Remodelación de un apartamento enfocada en la optimización del espacio y materialidad pura.',
+        images: [
+            R1_1.src,
+            R1_2.src,
+            R1_3.src,
+            R1_4.src,
+            R1_5.src,
+            R1_6.src,
+            R1_7.src,
+            R1_8.src
+        ],
+        span: 'md:col-span-10 md:col-start-2'
+    },
+    {
+        id: 'void-pavilion',
+        title: 'PABELLÓN DEL VACÍO',
+        location: 'Sintra, Portugal',
+        description: 'Arquitectura como un contenedor silencioso de la vida cotidiana.',
+        images: [
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuA8NSkBLr-2jGriFc77fRbZDfT96Vd8A5iDSxKo5QYffFpGRHzWUQ7DTo4bZxCYG3Q0T4zKVttfDUSUDhbVZbxxXknSqhV4R67odbK7KYvN2x3HB7PvChB9pdiqwtH-XidHBYVJPs1Ub3-8M5r2DtRy43TkakNU2dE7SL3r1Ropf20JHRuaivce3cH3lx6MhaR55nLnJsZq_ure_D2vFIrR4bwxEP4xErqaIluo69L8CJpz3_GC0ek-wO_URoDDcjZGDQdMkKse2RWa',
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuB2vmtZ-SbdcTawjLnlCP9QchxSIlg_HMMCAcfzJgKsBrlAngNDh8B8f5SmV-lcKK7jBgx_4-sccgp9837GAGa4V6EV1DIALuhDwI1H74krYrTFtQXf-PC0VP5VS5DiXYxNhzT39A5w2xCg2XT301bhUFpRCMm6nFwWBAV2Tb334j4usHlyvLfaOrD9yDinyUYwD4_mntr1tx7Q8de1tjBlYRlxqFUOy1g4CKU2SmJxhN1YpS8kE6j6Eo_4c54XKsnwBlfuFxy4Y4an'
+        ],
+        span: 'md:col-span-12 lg:col-span-5'
+    },
+    {
+        id: 'monolith-loft',
+        title: 'LOFT MONOLITO',
+        location: 'Berlín, Alemania',
+        description: 'Santuario de hormigón en el corazón metropolitano.',
+        images: [
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuB2vmtZ-SbdcTawjLnlCP9QchxSIlg_HMMCAcfzJgKsBrlAngNDh8B8f5SmV-lcKK7jBgx_4-sccgp9837GAGa4V6EV1DIALuhDwI1H74krYrTFtQXf-PC0VP5VS5DiXYxNhzT39A5w2xCg2XT301bhUFpRCMm6nFwWBAV2Tb334j4usHlyvLfaOrD9yDinyUYwD4_mntr1tx7Q8de1tjBlYRlxqFUOy1g4CKU2SmJxhN1YpS8kE6j6Eo_4c54XKsnwBlfuFxy4Y4an',
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuDmheHsmvpnnSu4i6FGwAb0f5_Z-ymkng7ujnCzdjeQwLp2p0oPo2fymmf59M-RWyedKyhCf9lLUwSKg8HXxY1pWqnzgb7_Oa8ckqlPfgGIGBuDyJ2zRlk1HylkXMJX3cKXUfZ3TlkKxrkk9L9mvMQ9ERZHyYzR7i9gkYRLHNfHRVineqssGSaM2a6F9dEPi9miKDZdv09XFJ_uFB4iHtDH_I_EYbJnHlz6s5o-HSscPOr6QQ18qpNncZkoV9-60DJlcc6INkj5pS0z'
+        ],
+        span: 'md:col-span-12 lg:col-span-7'
+    },
+    {
+        id: 'residencial-2',
+        title: 'RESIDENCIAL 2',
+        location: '', 
+        description: 'Vivienda unifamiliar con énfasis en la conexión interior-exterior y materialidad contemporánea.',
+        images: [
+            R2_1.src,
+            R2_2.src,
+            R2_3.src,
+            R2_4.src,
+            R2_5.src,
+            R2_6.src,
+            R2_7.src,
+            R2_8.src,
+            R2_9.src,
+            R2_10.src,
+            R2_11.src
+        ],
+        span: 'md:col-span-12'
+    }
+];
+---
+
+<Layout title="Minimal arquitectura | Residencial">
+    <main class="pt-32 pb-24">
+        <!-- Section Header -->
+        <header class="px-8 mb-12">
+            <div class="max-w-[1920px] mx-auto flex flex-col md:flex-row md:items-end justify-between gap-8">
+                <div>
+                    <span class="font-label text-[1rem] uppercase tracking-[0.2em] text-outline mb-4 block"> Sector</span>
+                    <h1 class="font-headline text-[3.5rem] leading-none font-extrabold tracking-tighter uppercase text-stone-900">RESIDENCIAL</h1>
+                </div>
+                <div class="max-w-md">
+                    <p class="font-body text-lg text-on-surface-variant leading-relaxed font-light">
+                        Una curación de viviendas monolíticas, explorando la intersección entre masa pesada y luz etérea. La arquitectura como contenedor silencioso de vida.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Projects: Full-Width Sections -->
+        <div>
+            {projects.map((project) => (
+                <section class="mb-20 md:mb-32 overflow-hidden">
+                    <!-- Global Image Block -->
+                    <div class="w-full relative bg-stone-100 aspect-video md:aspect-21/9">
+                        <ProjectCarousel images={project.images} id={project.id} />
+                    </div>
+                    
+                    <!-- Global Info Block -->
+                    <div class="w-full mt-6 md:mt-8 px-8">
+                        <div class="grid grid-cols-1 md:grid-cols-12">
+                            <div class="md:col-span-12">
+                                <h2 class="font-headline text-3xl md:text-4xl font-extrabold uppercase tracking-tighter mb-4 leading-none">
+                                    {project.title}
+                                </h2>
+                                <p class="font-body text-[0.95rem] md:text-lg text-on-surface-variant leading-relaxed opacity-80 max-w-none">
+                                    {project.description}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            ))}
+        </div>
+
+
+
+        <!-- CTA Section: Minimalist Intervention -->
+        <section class="mt-48 px-8 py-32 bg-stone-950 text-white flex items-center justify-center text-center">
+            <div class="max-w-2xl">
+                <h3 class="font-headline text-4xl font-extrabold uppercase tracking-tighter mb-8 italic">Empieza tu propio proyecto minimalista</h3>
+                <a class="inline-block bg-white text-black px-12 py-5 font-headline font-bold uppercase tracking-widest text-sm hover:bg-stone-200 transition-colors" href="https://wa.me/573008299673">
+                    Consultar Ahora
+                </a>
+            </div>
+        </section>
+    </main>
+</Layout>
