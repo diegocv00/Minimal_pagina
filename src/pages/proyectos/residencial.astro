@@ -69,13 +69,20 @@ import CasaM8_5 from '../../assets/CasaM8/CasaM8_5.jpeg';
 import CasaM8_6 from '../../assets/CasaM8/CasaM8_6.jpeg';
 import CasaM8_7 from '../../assets/CasaM8/CasaM8_7.jpeg';
 
+import CasaMS1 from '../../assets/CasaMS/CasaMS1.png';
+import CasaMS2 from '../../assets/CasaMS/CasaMS2.png';
+import CasaMS3 from '../../assets/CasaMS/CasaMS3.png';
+import CasaMS4 from '../../assets/CasaMS/CasaMS4.png';
+import CasaMS5 from '../../assets/CasaMS/CasaMS5.png';
+
+
+
 
 
 
 interface Project {
     id: string;
     title: string;
-    location: string;
     description: string;
     images: string[];
     span: string;
@@ -85,7 +92,6 @@ const projects: Project[] = [
     {
         id: 'aptocc',
         title: 'APARTAMENTO CC',
-        location: '', 
         description: 'Remodelación de un apartmento enfocada en la optimización del espacio y materialidad pura.',
         images: [
             AptoCC_1.src,
@@ -103,7 +109,6 @@ const projects: Project[] = [
     {
         id: 'aptocv',
         title: 'APARTAMENTO CV301',
-        location: '', 
         description: 'Vivienda unifamiliar con énfasis en la conexión interior-exterior y materialidad contemporánea.',
         images: [
             AptoCV_1.src,
@@ -122,7 +127,6 @@ const projects: Project[] = [
     {
         id: 'apto602',
         title: 'APARTAMENTO 602',
-        location: '', 
         description: 'Vivienda unifamiliar enfocada en la armonía geométrica y materialidad contemporánea.',
         images: [
             Apto602_1.src,
@@ -136,7 +140,6 @@ const projects: Project[] = [
     {
         id: 'aptolr',
         title: 'APARTAMENTO LR',
-        location: '', 
         description: 'Remodelación de un apartmento enfocada en la optimización del espacio y materialidad pura.',
         images: [
             AptoLR1.src,
@@ -151,7 +154,6 @@ const projects: Project[] = [
        {
         id: 'casaMadrigal',
         title: 'CASA MADRIGAL',
-        location: '', 
         description: 'Remodelación de un apartmento enfocada en la optimización del espacio y materialidad pura.',
         images: [
             CM1.src,
@@ -164,7 +166,6 @@ const projects: Project[] = [
        {
         id: 'casaMC',
         title: 'CASA MC',
-        location: '', 
         description: 'Remodelación de un apartmento enfocada en la optimización del espacio y materialidad pura.',
         images: [
             CasaMC1.src,
@@ -181,7 +182,6 @@ const projects: Project[] = [
            {
         id: 'aptoABNB',
         title: 'Apartamento Airbnb',
-        location: '', 
         description: 'Remodelación de un apartmento enfocada en la optimización del espacio y materialidad pura.',
         images: [
             AABNB1.src,
@@ -194,7 +194,6 @@ const projects: Project[] = [
            {
         id: 'aptoK604',
         title: 'Apartamento K604',
-        location: '', 
         description: 'Remodelación de un apartmento enfocada en la optimización del espacio y materialidad pura.',
         images: [
             AptoK604_1.src,
@@ -208,7 +207,6 @@ const projects: Project[] = [
            {
         id: 'casaM8',
         title: 'CASA Montaña 8',
-        location: '', 
         description: 'Remodelación de un apartmento enfocada en la optimización del espacio y materialidad pura.',
         images: [
             CasaM8_1.src,
@@ -221,6 +219,19 @@ const projects: Project[] = [
         ],
         span: 'md:col-span-10 md:col-start-2'
     },
+        {
+        id: 'casaMS',
+        title: 'CASA MS',
+        description: 'Remodelación de un apartmento enfocada en la optimización del espacio y materialidad pura.',
+        images: [
+            CasaMS1.src,
+            CasaMS2.src,
+            CasaMS3.src,
+            CasaMS4.src,
+            CasaMS5.src
+        ],
+        span: 'md:col-span-10 md:col-start-2'
+    }
 ];
 ---
 

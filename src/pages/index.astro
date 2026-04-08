@@ -29,13 +29,18 @@ import AptoLR6 from "../assets/AptoLR/AptoLR6.jpg";
 import CasaM8_1 from "../assets/CasaM8/CasaM8_1.jpeg";
 import CasaM8_2 from "../assets/CasaM8/CasaM8_2.jpeg";
 
+import CAMSVC1 from "../assets/CAMSanVicenteDeChucuri/CAMSVC1.png";
+import CAMSVC2 from "../assets/CAMSanVicenteDeChucuri/CAMSVC2.png";
+import CAMSVC3 from "../assets/CAMSanVicenteDeChucuri/CAMSVC3.png";
+import CAMSVC4 from "../assets/CAMSanVicenteDeChucuri/CAMSVC4.png";
+import CAMSVC5 from "../assets/CAMSanVicenteDeChucuri/CAMSVC5.png";
+import CAMSVC6 from "../assets/CAMSanVicenteDeChucuri/CAMSVC6.png";
+import CAMSVC7 from "../assets/CAMSanVicenteDeChucuri/CAMSVC7.png";
+
 const featuredProjects = [
     {
         id: "aptolr",
         title: "APARTAMENTO LR",
-        location: "",
-        description:
-            "Remodelacion de un apartamento enfocada en la optimizacion del espacio y materialidad pura.",
         images: [
             AptoLR1.src,
             AptoLR2.src,
@@ -49,8 +54,6 @@ const featuredProjects = [
     {
         id: "aptocc",
         title: "APARTAMENTO CC",
-        year: "2024",
-        location: "",
         images: [
             AptoCC_1.src,
             AptoCC_2.src,
@@ -64,21 +67,22 @@ const featuredProjects = [
         span: "lg:col-span-4 lg:col-start-9 md:mt-36",
     },
     {
-        id: "brutalist-pavilion",
-        title: "THE BRUTALIST PAVILION",
-        year: "2024",
-        location: "BERLIN",
+        id: "CAMSVC",
+        title: "CAM SAN VICENTE CHUCURI",
         images: [
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuD4JXV12e-o0YkLfnAT8tTnDlyyOJP5NI1r6vA97mmDXyb6G1xRNfFmN3xnrIq6tpCdDOxwOz8UfLZAJLjMMsMW_FfDpiHc1wpo1yYG2FM7I8LnO7aUXkxsTWHu0p5UbowiVm3rQnQpJmftHnKnAN1LjKDNTZo3B5FG8SCNsUCkIggpbhYGIaked7DhAf2Xkbwcki_EuGqYU6BmajIndLfeA1ZJU2lj9-u8IaHCcaOJZzkHmTNtjf910m8ptGCf_W9SS4Cgy8KjTSCT",
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuBEijYhtNeNQzeV-Dml6bGm_LulqViqceIS69AWqsjnV5OD2Dw_ifXmy-rGk7WMolB05XOSMHTZymou929_OZ5NEwc_gH1fzodia2t45Oe18m-g8WoCC_A_3d0abdtzgAmwepbHf858j1qQBXVF-ZsNMhoqXyW-yvHqGi0zxeCcvgfzQg3ZKoQNyszYONFg3r_5w06yskRZ3l0U2jogXfItS_ohE5TpmCWB7ZluN1iZVV0hI9s_LztY_rJZB5lWlZz7HdEzsM-Us5IM",
+            CAMSVC1.src,
+            CAMSVC2.src,
+            CAMSVC3.src,
+            CAMSVC4.src,
+            CAMSVC5.src,
+            CAMSVC6.src,
+            CAMSVC7.src,
         ],
         span: "lg:col-span-5 md:mt-[-4rem]",
     },
     {
         id: "essence-r",
         title: "ESSENCE R",
-        year: "2024",
-        location: "QUITO",
         images: [ER1.src, ER2.src, ER3.src, ER4.src, ER5.src, ER6.src],
         span: "lg:col-span-6 lg:col-start-7",
     },
@@ -103,9 +107,12 @@ const featuredProjects = [
                     AptoCC_3.src,
                     ER3.src,
                     AptoLR3.src,
+                    CAMSVC2.src,
                     AptoCC_4.src,
+                    CAMSVC3.src,
                     ER4.src,
                     AptoLR4.src,
+                    CAMSVC1.src,
                 ]}
                 id="hero-carousel"
                 columns={1}
@@ -118,7 +125,7 @@ const featuredProjects = [
         </div>
 
         <div
-            class="relative z-20 mx-auto flex h-full max-w-[1920px] flex-col justify-end px-6 pb-16 sm:px-8 sm:pb-20 md:pb-24"
+            class="pointer-events-none relative z-20 mx-auto flex h-full max-w-[1920px] flex-col justify-end px-6 pb-16 sm:px-8 sm:pb-20 md:pb-24 lg:pl-28"
         >
             <p
                 class="mb-6 font-label text-[0.8rem] uppercase tracking-[0.45em] text-white/75 sm:mb-8"
@@ -140,9 +147,9 @@ const featuredProjects = [
             <div class="mt-10">
                 <a
                     href={WHATSAPP_LINK}
-                    class="inline-flex items-center justify-center bg-white px-10 py-5 font-label text-[0.8rem] uppercase tracking-[0.35em] text-black transition-colors duration-300 hover:bg-stone-200"
+                    class="pointer-events-auto inline-flex items-center justify-center bg-white px-10 py-5 font-label text-[0.8rem] uppercase tracking-[0.35em] text-black transition-colors duration-300 hover:bg-stone-200"
                 >
-                    Cotizar proyecto
+                    Contáctanos
                 </a>
             </div>
         </div>

@@ -3,54 +3,105 @@ import Layout from '../../layouts/Layout.astro';
 import ProjectCarousel from '../../components/ProjectCarousel.astro';
 import fondoBanner from '../../assets/fondoBanner.png';
 
+import FF1 from '../../assets/FiscaliaFloridablanca/FF1.jpg';
+import FF2 from '../../assets/FiscaliaFloridablanca/FF2.jpg';
+import FF3 from '../../assets/FiscaliaFloridablanca/FF3.jpg';
+import FF4 from '../../assets/FiscaliaFloridablanca/FF4.jpg';
+import FF5 from '../../assets/FiscaliaFloridablanca/FF5.jpg';
+
+import CAMSVC1 from '../../assets/CAMSanVicenteDeChucuri/CAMSVC1.png';
+import CAMSVC2 from '../../assets/CAMSanVicenteDeChucuri/CAMSVC2.png';
+import CAMSVC3 from '../../assets/CAMSanVicenteDeChucuri/CAMSVC3.png';
+import CAMSVC4 from '../../assets/CAMSanVicenteDeChucuri/CAMSVC4.png';
+import CAMSVC5 from '../../assets/CAMSanVicenteDeChucuri/CAMSVC5.png';
+import CAMSVC6 from '../../assets/CAMSanVicenteDeChucuri/CAMSVC6.png';
+import CAMSVC7 from '../../assets/CAMSanVicenteDeChucuri/CAMSVC7.png';
+
+import MCPR1 from '../../assets/MegaColegioPuertoRico/MCPR1.png';
+import MCPR2 from '../../assets/MegaColegioPuertoRico/MCPR2.png';
+import MCPR3 from '../../assets/MegaColegioPuertoRico/MCPR3.png';
+import MCPR4 from '../../assets/MegaColegioPuertoRico/MCPR4.png';
+import MCPR5 from '../../assets/MegaColegioPuertoRico/MCPR5.png';
+import MCPR6 from '../../assets/MegaColegioPuertoRico/MCPR6.png';
+import MCPR7 from '../../assets/MegaColegioPuertoRico/MCPR7.png';
+
+import PY1 from '../../assets/ParqueYondo/PY1.png';
+import PY2 from '../../assets/ParqueYondo/PY2.png';
+import PY3 from '../../assets/ParqueYondo/PY3.png';
+import PY4 from '../../assets/ParqueYondo/PY4.png';
+import PY5 from '../../assets/ParqueYondo/PY5.png';
+import PY6 from '../../assets/ParqueYondo/PY6.png';
+import PY7 from '../../assets/ParqueYondo/PY7.png';
+
+
 interface Project {
     id: string;
     title: string;
-    location: string;
     description: string;
-    category: string;
     images: string[];
     span: string;
 }
 
 const projects: Project[] = [
     {
-        id: 'museum-concrete',
-        title: 'MUSEO NACIONAL DEL CONCRETO',
-        location: 'Varsovia, Polonia · 2022',
+        id: 'FF',
+        title: 'FISCALIA FLORIDABLANCA',
         description: 'Exploración de la materialidad cruda del agregado expuesto en un foro público masivo.',
-        category: 'Institucional / Cultura',
         images: [
-            'https://lh3.googleusercontent.com/aida-public/AB6AXuBEijYhtNeNQzeV-Dml6bGm_LulqViqceIS69AWqsjnV5OD2Dw_ifXmy-rGk7WMolB05XOSMHTZymou929_OZ5NEwc_gH1fzodia2t45Oe18m-g8WoCC_A_3d0abdtzgAmwepbHf858j1qQBXVF-ZsNMhoqXyW-yvHqGi0zxeCcvgfzQg3ZKoQNyszYONFg3r_5w06yskRZ3l0U2jogXfItS_ohE5TpmCWB7ZluN1iZVV0hI9s_LztY_rJZB5lWlZz7HdEzsM-Us5IM',
-            'https://lh3.googleusercontent.com/aida-public/AB6AXuDHR_Egm44jlESDowuHEarjHFr4XfU0ryoLvP4b7UITfx7HYGHMhvj9Q3CE_nvv4nj3Gxb-QKxeO1OcfL32KrxgbCzKPzJ9rIeLtG48xGUjcfJJ6AGRGNs_CvBQgmbM5J5ZmimplXE0JvBAJfPKaP7xMViIPwBA4ijtXv1ZsE9KD0VgT1nC1dnuOt8P7agF9aXIE9RaZXZdMSQCn6SnJZnY7bnCSKRpyIFDySOJSr8Mv2gyTlb_JDAzsnVKOJDHKJCzZbTHwaWu8KBC',
-            'https://lh3.googleusercontent.com/aida-public/AB6AXuDjG8viGwy_hwoYVELynr_9zB1jKFaF0ftGbmq5eiiIvef7-Dk9qeTlpyEdrbTWQt6wfQh1JhErfdl8PZtz8nTnikMl8PV95QMCrDOtwUljkR0h8rBXyxxhGPBCQQmDWddr0gNwkiSNbadsDxbZzEELGBoz14W8VWwtGJDE5DdW2lDcwjqMUOD9lfPaBJY-tRFMze1wxSsiOpgxjnPQ1auvT8yBhGeL96h6OMnDiAU3kriAlimNtROTUfSFGj8QNUOtZ1NqOONuoPSp'
+            FF1.src,
+            FF2.src,
+            FF3.src,
+            FF4.src,
+            FF5.src
         ],
         span: 'md:col-span-10 md:col-start-2'
     },
     {
-        id: 'arts-faculty',
-        title: 'FACULTAD DE ARTES',
-        location: 'Lyon, Francia · 2021',
-        description: 'Torre de hormigón que redefine el paisaje académico a través de la verticalidad.',
-        category: 'Educación',
+        id: 'CAMVSC',
+        title: 'CAM SAN VICENTE CHUCURI',
+        description: 'Diseño arquitectónico para el Centro de Atención al Minero en San Vicente de Chucurí, Santander. El proyecto prioriza la integración con el entorno natural y la funcionalidad para los mineros de la región.',
         images: [
-            'https://lh3.googleusercontent.com/aida-public/AB6AXuDHR_Egm44jlESDowuHEarjHFr4XfU0ryoLvP4b7UITfx7HYGHMhvj9Q3CE_nvv4nj3Gxb-QKxeO1OcfL32KrxgbCzKPzJ9rIeLtG48xGUjcfJJ6AGRGNs_CvBQgmbM5J5ZmimplXE0JvBAJfPKaP7xMViIPwBA4ijtXv1ZsE9KD0VgT1nC1dnuOt8P7agF9aXIE9RaZXZdMSQCn6SnJZnY7bnCSKRpyIFDySOJSr8Mv2gyTlb_JDAzsnVKOJDHKJCzZbTHwaWu8KBC',
-            'https://lh3.googleusercontent.com/aida-public/AB6AXuDxRi7J4NCghJZAJk7L3Ds9WRHbq564Jk9RvBwnJxFh4qVzQHBqQy9HhFDtPcnDbNkToE-mBZLjChlhVHJVI5Zeu074lpMGiJ3uKKfCdq7T22xbjKradVUb6ceCl4tjZRckXPYf4oTLaSc1pQCR0Zn6aT8-boy8lB7cO6rqqt5Q40wQHXjMWBjlOU5lQ0YCJYXpdl-btqwqSxeq0b0vevqzWWWU06n6VVy5kmISOwCQiZ6S2oSqtPY8zY5XJjMJRWLi5IdnzQ1BupaT'
+            CAMSVC1.src,
+            CAMSVC2.src,
+            CAMSVC3.src,
+            CAMSVC4.src,
+            CAMSVC5.src,
+            CAMSVC6.src,
+            CAMSVC7.src
         ],
         span: 'md:col-span-6 lg:col-span-4'
     },
     {
-        id: 'secondary-school',
-        title: 'SECUNDARIA SAINT-ETIENNE',
-        location: 'Bruselas, Bélgica · 2023',
+        id: 'MCPR',
+        title: 'MEGACOLEGIO PUERTO RICO',
         description: 'Espacios de aprendizaje fundados en la luz cenital y patios de hormigón.',
-        category: 'Educación',
         images: [
-            'https://lh3.googleusercontent.com/aida-public/AB6AXuDjG8viGwy_hwoYVELynr_9zB1jKFaF0ftGbmq5eiiIvef7-Dk9qeTlpyEdrbTWQt6wfQh1JhErfdl8PZtz8nTnikMl8PV95QMCrDOtwUljkR0h8rBXyxxhGPBCQQmDWddr0gNwkiSNbadsDxbZzEELGBoz14W8VWwtGJDE5DdW2lDcwjqMUOD9lfPaBJY-tRFMze1wxSsiOpgxjnPQ1auvT8yBhGeL96h6OMnDiAU3kriAlimNtROTUfSFGj8QNUOtZ1NqOONuoPSp',
-            'https://lh3.googleusercontent.com/aida-public/AB6AXuDxRi7J4NCghJZAJk7L3Ds9WRHbq564Jk9RvBwnJxFh4qVzQHBqQy9HhFDtPcnDbNkToE-mBZLjChlhVHJVI5Zeu074lpMGiJ3uKKfCdq7T22xbjKradVUb6ceCl4tjZRckXPYf4oTLaSc1pQCR0Zn6aT8-boy8lB7cO6rqqt5Q40wQHXjMWBjlOU5lQ0YCJYXpdl-btqwqSxeq0b0vevqzWWWU06n6VVy5kmISOwCQiZ6S2oSqtPY8zY5XJjMJRWLi5IdnzQ1BupaT'
+            MCPR1.src,
+            MCPR2.src,
+            MCPR3.src,
+            MCPR4.src,  
+            MCPR5.src,
+            MCPR6.src,
+            MCPR7.src
         ],
         span: 'md:col-span-6 lg:col-span-8'
-    }
+    },
+        {
+        id: 'ParqueYondo',
+        title: 'PARQUE YONDO',
+        description: 'Diseño arquitectónico para el Centro de Atención al Minero en San Vicente de Chucurí, Santander. El proyecto prioriza la integración con el entorno natural y la funcionalidad para los mineros de la región.',
+        images: [
+            PY1.src,
+            PY2.src,
+            PY3.src,
+            PY4.src,
+            PY5.src,
+            PY6.src,
+            PY7.src
+        ],
+        span: 'md:col-span-6 lg:col-span-4'
+    },
+
 ];
 ---
 
