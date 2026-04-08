@@ -60,11 +60,11 @@ const navLinks = [
             </div>
         </div>
 
-        <div class="flex flex-wrap items-center gap-x-10 gap-y-3 text-stone-950 md:justify-end">
+        <div class="flex w-full items-center justify-between gap-3 text-stone-950 md:w-auto md:flex-wrap md:justify-end md:gap-x-10 md:gap-y-3">
             {
                 navLinks.map((link) => (
                     <a
-                        class="font-headline uppercase tracking-widest text-[0.85rem] font-medium hover:opacity-70 transition-opacity"
+                        class="min-w-0 flex-1 text-center font-headline text-[0.85rem] font-medium uppercase tracking-widest transition-opacity hover:opacity-70 md:flex-none"
                         href={link.href}
                     >
                         {link.label}
