@@ -1,53 +1,53 @@
 @import "tailwindcss";
 
 @theme {
-  --color-surface-bright: #f9f9f9;
-  --color-tertiary-fixed-dim: #474747;
-  --color-surface-variant: #e2e2e2;
-  --color-on-background: #1a1c1c;
-  --color-on-secondary-container: #1b1c1c;
-  --color-background: #f9f9f9;
-  --color-on-primary-fixed-variant: #e2e2e2;
-  --color-on-primary-container: #ffffff;
+  --color-surface-bright: #fbf7f0;
+  --color-tertiary-fixed-dim: #4d463d;
+  --color-surface-variant: #e7dfd3;
+  --color-on-background: #1d1b18;
+  --color-on-secondary-container: #241f19;
+  --color-background: #f4efe7;
+  --color-on-primary-fixed-variant: #efe7dc;
+  --color-on-primary-container: #f9f5ee;
   --color-on-error: #ffffff;
   --color-error: #ba1a1a;
-  --color-on-tertiary-fixed-variant: #e2e2e2;
-  --color-primary-container: #3b3b3b;
-  --color-on-tertiary-container: #ffffff;
-  --color-surface-container-highest: #e2e2e2;
-  --color-outline-variant: #c6c6c6;
-  --color-primary: #000000;
-  --color-secondary-fixed: #c8c6c6;
-  --color-surface-container-high: #e8e8e8;
-  --color-secondary-fixed-dim: #acabab;
-  --color-secondary-container: #d6d4d3;
-  --color-tertiary: #3b3b3b;
-  --color-primary-fixed: #5e5e5e;
-  --color-surface-container: #eeeeee;
-  --color-outline: #777777;
-  --color-on-primary-fixed: #ffffff;
-  --color-secondary: #5f5e5e;
-  --color-tertiary-fixed: #5e5e5e;
+  --color-on-tertiary-fixed-variant: #efe7dc;
+  --color-primary-container: #39332b;
+  --color-on-tertiary-container: #f8f3ec;
+  --color-surface-container-highest: #ded3c3;
+  --color-outline-variant: #c8bba8;
+  --color-primary: #171512;
+  --color-secondary-fixed: #d6ccbe;
+  --color-surface-container-high: #e8dfd2;
+  --color-secondary-fixed-dim: #bdb19f;
+  --color-secondary-container: #ddd3c5;
+  --color-tertiary: #564e43;
+  --color-primary-fixed: #5f5549;
+  --color-surface-container: #ede5da;
+  --color-outline: #7a6f61;
+  --color-on-primary-fixed: #f8f3ec;
+  --color-secondary: #6b6257;
+  --color-tertiary-fixed: #685f52;
   --color-on-error-container: #410002;
   --color-surface: #f9f9f9;
-  --color-surface-dim: #dadada;
-  --color-on-surface-variant: #474747;
+  --color-surface-dim: #e4dacd;
+  --color-on-surface-variant: #554d42;
   --color-error-container: #ffdad6;
-  --color-on-surface: #1a1c1c;
-  --color-on-secondary-fixed: #1b1c1c;
-  --color-surface-container-low: #f3f3f3;
-  --color-on-secondary-fixed-variant: #3b3b3b;
-  --color-surface-tint: #5e5e5e;
-  --color-tertiary-container: #747474;
-  --color-inverse-primary: #c6c6c6;
-  --color-surface-container-lowest: #ffffff;
-  --color-inverse-surface: #2f3131;
-  --color-on-primary: #e2e2e2;
-  --color-on-tertiary-fixed: #ffffff;
-  --color-on-tertiary: #e2e2e2;
-  --color-inverse-on-surface: #f1f1f1;
-  --color-on-secondary: #ffffff;
-  --color-primary-fixed-dim: #474747;
+  --color-on-surface: #1d1b18;
+  --color-on-secondary-fixed: #241f19;
+  --color-surface-container-low: #f3ede5;
+  --color-on-secondary-fixed-variant: #39332b;
+  --color-surface-tint: #5f5549;
+  --color-tertiary-container: #786e61;
+  --color-inverse-primary: #d5cabd;
+  --color-surface-container-lowest: #fffdf9;
+  --color-inverse-surface: #2a2723;
+  --color-on-primary: #f6f2eb;
+  --color-on-tertiary-fixed: #f8f3ec;
+  --color-on-tertiary: #f6f2eb;
+  --color-inverse-on-surface: #f6f1ea;
+  --color-on-secondary: #f8f3ec;
+  --color-primary-fixed-dim: #4d463d;
 
   --radius-default: 0rem;
   --radius-lg: 0rem;
@@ -56,10 +56,51 @@
   --font-headline: "Manrope", sans-serif;
   --font-body: "Inter", sans-serif;
   --font-label: "Inter", sans-serif;
+  --site-max-width: 120rem;
+  --header-offset: 6.5rem;
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   html, body {
     @apply bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  .site-container {
+    @apply mx-auto w-full max-w-[var(--site-max-width)] px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-space {
+    @apply py-16 sm:py-20 lg:py-28;
+  }
+
+  .button-primary {
+    @apply inline-flex items-center justify-center border border-primary bg-primary px-6 py-3 text-center font-label text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-on-primary transition-colors duration-300 hover:bg-primary-container;
+  }
+
+  .button-secondary {
+    @apply inline-flex items-center justify-center border border-on-primary/40 bg-white/10 px-6 py-3 text-center font-label text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-white backdrop-blur-sm transition-colors duration-300 hover:bg-white hover:text-primary;
+  }
+
+  .contact-pill {
+    @apply inline-flex items-center gap-2.5 border border-outline-variant bg-surface-container-lowest px-3 py-2 text-sm text-on-surface transition-colors duration-300 hover:bg-surface-container-low;
+    box-shadow: 0 18px 40px rgba(23, 21, 18, 0.08);
+  }
+
+  .header-link {
+    @apply font-label text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-on-surface/78 transition-colors duration-300 hover:text-primary;
+  }
+
+  .footer-link {
+    @apply font-body text-sm text-on-surface/70 transition-colors duration-300 hover:text-primary;
   }
 }
