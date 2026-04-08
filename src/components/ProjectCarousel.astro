@@ -3,9 +3,19 @@ interface Props {
     images: string[];
     id: string;
     columns?: number;
+    prevButtonClass?: string;
+    nextButtonClass?: string;
+    showArrows?: boolean;
 }
 
-const { images, id, columns = 3 } = Astro.props;
+const {
+    images,
+    id,
+    columns = 3,
+    prevButtonClass = "",
+    nextButtonClass = "",
+    showArrows = true,
+} = Astro.props;
 const displayColumns = columns === 1 ? "md:w-full" : "md:w-1/3";
 const bufferCount = columns === 1 ? 1 : 3;
 ---
@@ -34,27 +44,33 @@ const bufferCount = columns === 1 ? 1 : 3;
         }
     </div>
 
-    <!-- Navigation Arrows -->
-    <button
-        class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white transition-colors"
-        id={`prev-${id}`}
-        type="button"
-        aria-label="Previous image"
-    >
-        <span class="material-symbols-outlined text-5xl md:text-[5rem] font-thin"
-            >chevron_left</span
-        >
-    </button>
-    <button
-        class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white transition-colors"
-        id={`next-${id}`}
-        type="button"
-        aria-label="Next image"
-    >
-        <span class="material-symbols-outlined text-5xl md:text-[5rem] font-thin"
-            >chevron_right</span
-        >
-    </button>
+    {
+        showArrows && (
+            <>
+                <!-- Navigation Arrows -->
+                <button
+                    class={`absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white transition-colors ${prevButtonClass}`}
+                    id={`prev-${id}`}
+                    type="button"
+                    aria-label="Previous image"
+                >
+                    <span class="material-symbols-outlined text-5xl md:text-[5rem] font-thin"
+                        >chevron_left</span
+                    >
+                </button>
+                <button
+                    class={`absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white transition-colors ${nextButtonClass}`}
+                    id={`next-${id}`}
+                    type="button"
+                    aria-label="Next image"
+                >
+                    <span class="material-symbols-outlined text-5xl md:text-[5rem] font-thin"
+                        >chevron_right</span
+                    >
+                </button>
+            </>
+        )
+    }
 
     <!-- Progress Line -->
     <div class="absolute bottom-0 left-0 w-full h-0.5 bg-white/10 z-20">
