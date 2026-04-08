@@ -4,7 +4,6 @@ import Layout from "../../layouts/Layout.astro";
 
 <Layout title="Minimal Arquitectura | Proyectos">
     <main class="pt-32 pb-24">
-        <!-- Header Section -->
         <header class="px-8 mb-24 max-w-[1920px] mx-auto">
             <h1
                 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter leading-none mb-6"
@@ -14,17 +13,36 @@ import Layout from "../../layouts/Layout.astro";
             <p
                 class="font-body text-lg text-on-surface-variant leading-relaxed font-light max-w-2xl"
             >
-                Explora nuestro catálogo completo dividido en zonas de
-                intervención. Cada estructura refleja nuestra filosofía de
-                materialidad honesta e integración contextual adaptada al
-                propósito de sus habitantes.
+                Explora nuestro catalogo completo dividido en zonas de
+                intervencion. Cada estructura refleja nuestra filosofia de
+                materialidad honesta e integracion contextual adaptada al
+                proposito de sus habitantes.
             </p>
         </header>
 
-        <!-- Project Categories -->
         <section
             class="px-8 max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12"
         >
+            <a href="/proyectos/residencial" class="group block">
+                <div
+                    class="aspect-[4/5] overflow-hidden bg-surface-container-low mb-6"
+                >
+                    <img
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQLsEWkyyCP5ZTKi5RFo1XTYCetPT6iyqEAy4uKl_OkZGt2II8_Dmjxzr5pUnOn79M-T5bAOEYAIbd-MGrEjFYZUsHvzR9LO-SRYDeXADa3w8EDBz1VnX3YPsioMfDM9uK0fFiNDgMZ9yOiE-jpJIGUX7MVwzCjDiBXb1UqpRNlF6s-1vvTh5hkrBo6KxcFc7Dd76YHgzEnajK9BbZzotKgN1_dB3J9v29_5XJEC8NC_OxEUYqE27o1hNm4wbcBqpkmEzqSnI-6IZK"
+                        alt="Proyectos Residenciales"
+                        class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                    />
+                </div>
+                <h2
+                    class="font-headline text-2xl font-bold uppercase tracking-tight group-hover:text-primary/70 transition-colors"
+                >
+                    Residencial
+                </h2>
+                <p class="font-body text-sm text-on-surface-variant mt-2">
+                    Viviendas monoliticas y refugios de intimidad estructural.
+                </p>
+            </a>
+
             <a href="/proyectos/comercial" class="group block">
                 <div
                     class="aspect-[4/5] overflow-hidden bg-surface-container-low mb-6"
@@ -61,28 +79,8 @@ import Layout from "../../layouts/Layout.astro";
                     Institucional
                 </h2>
                 <p class="font-body text-sm text-on-surface-variant mt-2">
-                    Museos, escuelas y atrios cívicos fundados en la durabilidad
+                    Museos, escuelas y atrios civicos fundados en la durabilidad
                     comunitaria.
-                </p>
-            </a>
-
-            <a href="/proyectos/residencial" class="group block">
-                <div
-                    class="aspect-[4/5] overflow-hidden bg-surface-container-low mb-6"
-                >
-                    <img
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQLsEWkyyCP5ZTKi5RFo1XTYCetPT6iyqEAy4uKl_OkZGt2II8_Dmjxzr5pUnOn79M-T5bAOEYAIbd-MGrEjFYZUsHvzR9LO-SRYDeXADa3w8EDBz1VnX3YPsioMfDM9uK0fFiNDgMZ9yOiE-jpJIGUX7MVwzCjDiBXb1UqpRNlF6s-1vvTh5hkrBo6KxcFc7Dd76YHgzEnajK9BbZzotKgN1_dB3J9v29_5XJEC8NC_OxEUYqE27o1hNm4wbcBqpkmEzqSnI-6IZK"
-                        alt="Proyectos Residenciales"
-                        class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                    />
-                </div>
-                <h2
-                    class="font-headline text-2xl font-bold uppercase tracking-tight group-hover:text-primary/70 transition-colors"
-                >
-                    Residencial
-                </h2>
-                <p class="font-body text-sm text-on-surface-variant mt-2">
-                    Viviendas monolíticas y refugios de intimidad estructural.
                 </p>
             </a>
         </section>

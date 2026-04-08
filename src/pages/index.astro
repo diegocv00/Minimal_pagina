@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ProjectCarousel from "../components/ProjectCarousel.astro";
-import { WHATSAPP_DISPLAY, WHATSAPP_LINK } from "../consts/site";
+import { WHATSAPP_LINK } from "../consts/site";
 
 import ER1 from "../assets/Essence_R/ER1.jpeg";
 import ER2 from "../assets/Essence_R/ER2.jpeg";
@@ -33,6 +33,9 @@ const featuredProjects = [
     {
         id: "aptolr",
         title: "APARTAMENTO LR",
+        location: "",
+        description:
+            "Remodelacion de un apartamento enfocada en la optimizacion del espacio y materialidad pura.",
         images: [
             AptoLR1.src,
             AptoLR2.src,
@@ -46,6 +49,8 @@ const featuredProjects = [
     {
         id: "aptocc",
         title: "APARTAMENTO CC",
+        year: "2024",
+        location: "",
         images: [
             AptoCC_1.src,
             AptoCC_2.src,
@@ -56,20 +61,24 @@ const featuredProjects = [
             AptoCC_7.src,
             AptoCC_8.src,
         ],
-        span: "lg:col-span-4 lg:col-start-9 md:mt-24",
+        span: "lg:col-span-4 lg:col-start-9 md:mt-36",
     },
     {
         id: "brutalist-pavilion",
         title: "THE BRUTALIST PAVILION",
+        year: "2024",
+        location: "BERLIN",
         images: [
             "https://lh3.googleusercontent.com/aida-public/AB6AXuD4JXV12e-o0YkLfnAT8tTnDlyyOJP5NI1r6vA97mmDXyb6G1xRNfFmN3xnrIq6tpCdDOxwOz8UfLZAJLjMMsMW_FfDpiHc1wpo1yYG2FM7I8LnO7aUXkxsTWHu0p5UbowiVm3rQnQpJmftHnKnAN1LjKDNTZo3B5FG8SCNsUCkIggpbhYGIaked7DhAf2Xkbwcki_EuGqYU6BmajIndLfeA1ZJU2lj9-u8IaHCcaOJZzkHmTNtjf910m8ptGCf_W9SS4Cgy8KjTSCT",
             "https://lh3.googleusercontent.com/aida-public/AB6AXuBEijYhtNeNQzeV-Dml6bGm_LulqViqceIS69AWqsjnV5OD2Dw_ifXmy-rGk7WMolB05XOSMHTZymou929_OZ5NEwc_gH1fzodia2t45Oe18m-g8WoCC_A_3d0abdtzgAmwepbHf858j1qQBXVF-ZsNMhoqXyW-yvHqGi0zxeCcvgfzQg3ZKoQNyszYONFg3r_5w06yskRZ3l0U2jogXfItS_ohE5TpmCWB7ZluN1iZVV0hI9s_LztY_rJZB5lWlZz7HdEzsM-Us5IM",
         ],
-        span: "lg:col-span-5 lg:-mt-12",
+        span: "lg:col-span-5 md:mt-[-4rem]",
     },
     {
         id: "essence-r",
         title: "ESSENCE R",
+        year: "2024",
+        location: "QUITO",
         images: [ER1.src, ER2.src, ER3.src, ER4.src, ER5.src, ER6.src],
         span: "lg:col-span-6 lg:col-start-7",
     },
@@ -78,8 +87,7 @@ const featuredProjects = [
 
 <Layout title="Minimal arquitectura | Inicio">
     <header
-        class="relative isolate overflow-hidden bg-primary text-white"
-        style="margin-top: var(--header-offset); min-height: calc(100svh - var(--header-offset));"
+        class="relative mt-40 h-[calc(100vh-10rem)] min-h-[680px] w-full overflow-hidden bg-black md:mt-32 md:h-[calc(100vh-8rem)] md:min-h-[600px]"
     >
         <div class="absolute inset-0 z-0">
             <ProjectCarousel
@@ -105,93 +113,95 @@ const featuredProjects = [
         </div>
 
         <div
-            class="absolute inset-0 z-10 bg-linear-to-br from-primary via-primary/60 to-primary/20 pointer-events-none"
+            class="absolute inset-0 z-10 bg-linear-to-t from-stone-950 via-stone-950/25 to-transparent pointer-events-none"
         >
         </div>
 
         <div
-            class="site-container relative z-20 flex min-h-[calc(100svh-var(--header-offset))] flex-col justify-end py-16 sm:py-20 lg:py-24"
+            class="relative z-20 mx-auto flex h-full max-w-[1920px] flex-col justify-end px-6 pb-16 sm:px-8 sm:pb-20 md:pb-24"
         >
-            <div class="max-w-4xl">
-                <p
-                    class="font-label text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-white/68"
+            <p
+                class="mb-6 font-label text-[0.8rem] uppercase tracking-[0.45em] text-white/75 sm:mb-8"
+            >
+                Minimal arquitectura
+            </p>
+            <h1
+                class="max-w-[1200px] font-headline text-[clamp(4.4rem,16vw,10rem)] leading-[0.88] tracking-tighter text-white uppercase drop-shadow-xl md:leading-[0.85]"
+            >
+                Definiendo
+                <span class="block">el vacio.</span>
+            </h1>
+            <p
+                class="mt-6 max-w-4xl font-body text-lg leading-relaxed text-white/85 sm:text-2xl"
+            >
+                Espacios honestos, funcionales y pulidos con una presencia
+                consistente desde movil hasta escritorio.
+            </p>
+            <div class="mt-10">
+                <a
+                    href={WHATSAPP_LINK}
+                    class="inline-flex items-center justify-center bg-white px-10 py-5 font-label text-[0.8rem] uppercase tracking-[0.35em] text-black transition-colors duration-300 hover:bg-stone-200"
                 >
-                    Minimal Arquitectura
-                </p>
-                <h1
-                    class="mt-6 font-headline text-[clamp(3.4rem,10vw,8rem)] leading-[0.9] tracking-[-0.05em] uppercase drop-shadow-xl"
-                >
-                    Definiendo<span class="block">el vacio.</span>
-                </h1>
-                <p
-                    class="mt-6 max-w-2xl text-base leading-relaxed text-white/76 sm:text-lg"
-                >
-                    Espacios honestos, funcionales y pulidos con una presencia
-                    consistente desde movil hasta escritorio.
-                </p>
-                <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                    <a
-                        href={WHATSAPP_LINK}
-                        class="inline-flex items-center justify-center border border-white bg-white px-6 py-3 text-center font-label text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-primary transition-colors duration-300 hover:bg-surface-container-lowest"
-                    >
-                        Cotizar proyecto
-                    </a>
-                    <a
-                        href={WHATSAPP_LINK}
-                        class="button-secondary sm:min-w-[15rem]"
-                    >
-                        {WHATSAPP_DISPLAY}
-                    </a>
-                </div>
+                    Cotizar proyecto
+                </a>
             </div>
         </div>
     </header>
 
-    <section class="site-container section-space">
+    <section class="pb-40 px-8 max-w-[1920px] mx-auto">
         <div
-            class="mb-14 flex flex-col gap-6 md:mb-16 md:flex-row md:items-end md:justify-between"
+            class="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8"
         >
             <div>
-                <h2
-                    class="mt-2 font-headline text-4xl font-bold uppercase tracking-tight sm:text-5xl"
+                <h3
+                    class="font-headline text-5xl font-bold tracking-tighter uppercase mt-6"
                 >
                     Proyectos
-                </h2>
+                </h3>
             </div>
             <a
                 href="/proyectos"
-                class="inline-flex items-center gap-2 border-b border-primary pb-2 font-label text-[0.72rem] font-semibold uppercase tracking-[0.24em] transition-all duration-300 hover:gap-4"
+                class="font-label text-[0.8rem] uppercase tracking-widest border-b border-primary pb-2 hover:pr-6 transition-all duration-300 flex items-center group"
             >
                 Ver mas proyectos
-                <span class="material-symbols-outlined">north_east</span>
+                <span
+                    class="material-symbols-outlined ml-2 group-hover:rotate-45 transition-transform"
+                >
+                    north_east
+                </span>
             </a>
         </div>
-
         <div
-            class="grid grid-cols-1 items-start gap-y-12 md:grid-cols-2 md:gap-x-6 lg:grid-cols-12 lg:gap-x-8"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-16 md:gap-x-6 lg:gap-x-8 items-start"
         >
             {
                 featuredProjects.map((project) => (
                     <div class={`${project.span} group block`}>
-                        <div class="relative aspect-[4/5] overflow-hidden bg-surface-container-high sm:aspect-[16/11] md:h-[420px] md:aspect-auto lg:h-[520px]">
+                        <div class="relative overflow-hidden bg-surface-container-high aspect-16/10 md:aspect-auto md:h-[600px]">
                             <ProjectCarousel
                                 images={project.images}
                                 id={project.id}
                                 columns={1}
                             />
                         </div>
-                        <div class="mt-6">
-                            <h3 class="font-headline text-2xl font-bold transition-colors group-hover:text-primary/70">
-                                {project.title}
-                            </h3>
+                        <div class="mt-8 flex justify-between items-start">
+                            <div>
+                                <h4 class="font-headline text-2xl font-bold mb-2 group-hover:text-primary/70 transition-colors">
+                                    {project.title}
+                                </h4>
+                            </div>
                         </div>
                     </div>
                 ))
             }
         </div>
-
-        <div class="mt-12 flex justify-center sm:mt-16">
-            <a href={WHATSAPP_LINK} class="button-primary">Cotizar proyecto</a>
+        <div class="mt-32 flex justify-center">
+            <a
+                href={WHATSAPP_LINK}
+                class="bg-primary text-on-primary px-12 py-5 font-label uppercase tracking-[0.2em] text-[0.8rem] hover:opacity-90 transition-opacity active:scale-95 duration-200"
+            >
+                Cotizar proyecto
+            </a>
         </div>
     </section>
 </Layout>
