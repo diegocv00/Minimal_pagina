@@ -99,7 +99,7 @@ const bufferCount = columns === 1 ? 1 : 3;
     const nextBtn = document.getElementById(`next-${id}`);
     const progressBar = document.getElementById(`progress-${id}`);
 
-    if (scroller && prevBtn && nextBtn) {
+    if (scroller) {
         const totalSlides = Number(count) || scroller.children.length;
 
         const getStepSize = () => {
@@ -135,17 +135,21 @@ const bufferCount = columns === 1 ? 1 : 3;
             }, 3000);
         };
 
-        prevBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            advance(-1);
-        });
+        if (prevBtn) {
+            prevBtn.addEventListener("click", (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                advance(-1);
+            });
+        }
 
-        nextBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            advance(1);
-        });
+        if (nextBtn) {
+            nextBtn.addEventListener("click", (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                advance(1);
+            });
+        }
 
         let autoPlayInterval = setInterval(() => {
             goToIndex(getCurrentIndex() + 1);
