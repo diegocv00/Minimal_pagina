@@ -10,6 +10,14 @@ import ER4 from '../../assets/Essence_R/ER4.jpeg';
 import ER5 from '../../assets/Essence_R/ER5.jpeg';
 import ER6 from '../../assets/Essence_R/ER6.jpeg';
 
+import OFLC1 from '../../assets/OficinasLaColombiana/OFLC1.jpeg';
+import OFLC2 from '../../assets/OficinasLaColombiana/OFLC2.jpeg';
+import OFLC3 from '../../assets/OficinasLaColombiana/OFLC3.jpeg';
+import OFLC4 from '../../assets/OficinasLaColombiana/OFLC4.jpeg';
+import OFLC5 from '../../assets/OficinasLaColombiana/OFLC5.jpeg';
+import OFLC6 from '../../assets/OficinasLaColombiana/OFLC6.jpeg';
+import OFLC7 from '../../assets/OficinasLaColombiana/OFLC7.jpeg';
+
 interface Project {
     id: string;
     title: string;
@@ -19,27 +27,20 @@ interface Project {
 }
 
 const projects: Project[] = [
-    {
-        id: 'axis-tower',
-        title: 'TORRE AXIS',
+        {
+        id: 'OFLC',
+        title: 'OFICINAS LA COLOMBIANA',
         description: 'Intervención urbana de alta densidad y atmósfera corporativa.',
         images: [
-            'https://lh3.googleusercontent.com/aida-public/AB6AXuCys2C236QTQnFrau5CINKZFL578Hm5-QxPExPDtSpG7QmnCu6ws-hJdDZO-DCWmfUZRFzZwcwtDwd01dWVFkgQnznPtkSfEamZc-QqOiTycW1keOlhD7cuFk_IjYmaBXXJsdNq-MUjm6VaUMqTROcJw47hSVrDDT5p-9yQHSRcsid6QpK2ocFmIFqcGBc2kQfSMaqgnbnRoFXUPGCvRXFK8rcGhKPRviTuivXc9bkZ935cGIWcGDeG2NNpxKnCL2PLfRQaDVrnTbYS',
-            'https://lh3.googleusercontent.com/aida-public/AB6AXuDnmM0Yk0fdyn4cccA7B5iPVRKMUF1KvtV63r6wbpDSBMsbtjTeZbZPyHPi6rNECWbeosRTaQdqzWzPqK4doI7ogJD2Xefq7pFHBA0Tb2nEAOs1-5fI3Gn9pKVmrlf2tTZfo2fzioV51wyaaGbjwvM04qSqVWV0GX5NNVA5E_i_6XBniF8tNoBYCZlUhyFjEN6qh9Vym8b5-xiINtF3KEljmoOI0qIZqN0EVrTfmwRELqzRro63Ex5tH5cNxng3ZzO2qCUTpgTIMk7b',
-            'https://lh3.googleusercontent.com/aida-public/AB6AXuDflpv3Tydz4bEPDYg4g1ZJCWVU2eDTXuppU6YIaUwff58wtc-S2nGEjRy0-pTfip6tzIyaSwNnkQW4WDl-6sp-YQrdKW2FIx4sUs3YOjZXqejNxlGA_6Ut0nh96_jetaccvqdXjSIll7zFqJGlKOofIlXgmq7BnMszkvZ7hdPCjT2ywEl_w8c6J3vxE9zGcPfiPZHaKu5z1PI-WNpUqT77udMIXTdfRmX3gqS4xL47VhG4Tn4b2EbBt0-_SqwBp9FOhqQiHgX6MvIr'
+            OFLC1.src,
+            OFLC2.src,
+            OFLC3.src,
+            OFLC4.src,
+            OFLC5.src,
+            OFLC6.src
         ],
         span: 'md:col-span-10 md:col-start-2'
-    },
-    {
-        id: 'atrio-offices',
-        title: 'OFICINAS EL ATRIO',
-        description: 'Monolito de espacio de trabajo con claridad estructural.',
-        images: [
-            'https://lh3.googleusercontent.com/aida-public/AB6AXuDnmM0Yk0fdyn4cccA7B5iPVRKMUF1KvtV63r6wbpDSBMsbtjTeZbZPyHPi6rNECWbeosRTaQdqzWzPqK4doI7ogJD2Xefq7pFHBA0Tb2nEAOs1-5fI3Gn9pKVmrlf2tTZfo2fzioV51wyaaGbjwvM04qSqVWV0GX5NNVA5E_i_6XBniF8tNoBYCZlUhyFjEN6qh9Vym8b5-xiINtF3KEljmoOI0qIZqN0EVrTfmwRELqzRro63Ex5tH5cNxng3ZzO2qCUTpgTIMk7b',
-            'https://lh3.googleusercontent.com/aida-public/AB6AXuAfceFefFVfaiQWYzI-a1ehhHhlSd15PlXQBO62EFuADfNc_AQFo7Ep7QQfz9dLbOPa5KHslF-q1yCeHX5PckaHb2saqIZ2dbi8Clz_mhBBYddzqc24jLwsO_BqwnhMeThsgoZKvtQoyWmmUB1ogi1AoVNjJDNlR-d8Q1SQ6Qa8yN2RO9T1SMeDMBh1Ego3FwePPkxifaZ5GBdk_cTl7lIXBHCcyw2dLn24jsNCrSZC3_ZLuy6Zgc2tBdcAgwjFuJpwDBTyk-q5nbqQ'
-        ],
-        span: 'md:col-span-5'
-    },
+    },  
     {
         id: 'essence-r',
         title: 'ESSENCE R',
@@ -53,7 +54,7 @@ const projects: Project[] = [
             ER3.src
         ],
         span: 'md:col-span-7'
-    }
+    },
 ];
 ---
 
