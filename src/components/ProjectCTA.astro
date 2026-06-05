@@ -1,0 +1,28 @@
+---
+import fondoBanner from "../assets/fondoBanner.png";
+import { WHATSAPP_LINK } from "../consts/site";
+
+interface Props {
+    title?: string;
+    buttonText?: string;
+}
+
+const { title = "Empieza tu sueño", buttonText = "Cotizar ahora" } = Astro.props;
+---
+
+<section
+    class="relative mt-48 px-8 py-32 bg-stone-950 text-white flex items-center justify-center text-center bg-cover bg-center"
+    style={`background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${fondoBanner.src});`}
+>
+    <div class="relative z-10 max-w-2xl">
+        <h3 class="font-headline text-4xl font-extrabold uppercase tracking-tighter mb-8 italic">
+            {title}
+        </h3>
+        <a
+            class="inline-block bg-white text-black px-12 py-5 font-headline font-bold uppercase tracking-widest text-sm hover:bg-stone-200 transition-colors"
+            href={WHATSAPP_LINK}
+        >
+            {buttonText}
+        </a>
+    </div>
+</section>

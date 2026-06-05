@@ -17,6 +17,9 @@ pnpm-debug.log*
 .env
 .env.production
 
+# graphify knowledge graph output
+graphify-out/
+
 # macOS-specific files
 .DS_Store
 

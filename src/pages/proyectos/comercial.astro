@@ -1,130 +1,37 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import ProjectCarousel from '../../components/ProjectCarousel.astro';
-import fondoBanner from '../../assets/fondoBanner.png';
+import ProjectList from '../../components/ProjectList.astro';
+import ProjectCTA from '../../components/ProjectCTA.astro';
 
-import ER1 from '../../assets/Essence_R/ER1.jpeg';
-import ER2 from '../../assets/Essence_R/ER2.jpeg';
-import ER3 from '../../assets/Essence_R/ER3.jpeg';
-import ER4 from '../../assets/Essence_R/ER4.jpeg';
-import ER5 from '../../assets/Essence_R/ER5.jpeg';
-import ER6 from '../../assets/Essence_R/ER6.jpeg';
+const OFLCImages = Object.values(import.meta.glob('../../assets/OficinasLaColombiana/*.{jpeg,jpg,png}', { eager: true }))
+    .map((m: any) => m.default?.src ?? '').filter(Boolean)
+    .sort((a: string, b: string) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+const essenceRImages = Object.values(import.meta.glob('../../assets/Essence_R/*.{jpeg,jpg,png}', { eager: true }))
+    .map((m: any) => m.default?.src ?? '').filter(Boolean)
+    .sort((a: string, b: string) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+const aptoABNBImages = Object.values(import.meta.glob('../../assets/AptoAirBNB/*.{jpeg,jpg,png}', { eager: true }))
+    .map((m: any) => m.default?.src ?? '').filter(Boolean)
+    .sort((a: string, b: string) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
 
-import OFLC1 from '../../assets/OficinasLaColombiana/OFLC1.jpeg';
-import OFLC2 from '../../assets/OficinasLaColombiana/OFLC2.jpeg';
-import OFLC3 from '../../assets/OficinasLaColombiana/OFLC3.jpeg';
-import OFLC4 from '../../assets/OficinasLaColombiana/OFLC4.jpeg';
-import OFLC5 from '../../assets/OficinasLaColombiana/OFLC5.jpeg';
-import OFLC6 from '../../assets/OficinasLaColombiana/OFLC6.jpeg';
-import OFLC7 from '../../assets/OficinasLaColombiana/OFLC7.jpeg';
-
-import AABNB1 from '../../assets/AptoAirBNB/AABNB1.jpeg';
-import AABNB2 from '../../assets/AptoAirBNB/AABNB2.jpeg';
-import AABNB3 from '../../assets/AptoAirBNB/AABNB3.jpeg';
-import AABNB4 from '../../assets/AptoAirBNB/AABNB4.jpeg';
-
-interface Project {
-    id: string;
-    title: string;
-    description: string;
-    images: string[];
-    span: string;
-}
-
-const projects: Project[] = [
-        {
-        id: 'OFLC',
-        title: 'OFICINAS LA COLOMBIANA',
-        description: '',
-        images: [
-            OFLC1.src,
-            OFLC2.src,
-            OFLC3.src,
-            OFLC4.src,
-            OFLC5.src,
-            OFLC6.src,
-            OFLC7.src
-        ],
-        span: 'md:col-span-10 md:col-start-2'
-    },  
-    {
-        id: 'essence-r',
-        title: 'ESSENCE R',
-        description: '',
-        images: [
-            ER1.src,
-            ER2.src,
-            ER6.src,
-            ER4.src,
-            ER5.src,
-            ER3.src
-        ],
-        span: 'md:col-span-7'
-    },
-           {
-        id: 'aptoABNB',
-        title: 'Apartamento Airbnb',
-        description: '',
-        images: [
-            AABNB1.src,
-            AABNB2.src,
-            AABNB3.src,
-            AABNB4.src
-        ],
-        span: 'md:col-span-10 md:col-start-2'
-    },
+const projects = [
+    { id: 'OFLC', title: 'OFICINAS LA COLOMBIANA', images: OFLCImages },
+    { id: 'essence-r', title: 'ESSENCE R', images: essenceRImages },
+    { id: 'aptoABNB', title: 'APARTAMENTO AIRBNB', images: aptoABNBImages },
 ];
 ---
 
 <Layout title="Minimal arquitectura | Comercial">
     <main class="pt-32 pb-24">
-        <!-- Header Section -->
         <header class="px-8 mb-24 max-w-[1920px] mx-auto">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
                 <div class="max-w-2xl">
                     <span class="font-label text-[1rem] uppercase tracking-[0.2em] text-outline mb-4 block"> Sector</span>
                     <h1 class="font-headline text-4xl sm:text-[3rem] md:text-[3.5rem] lg:text-7xl font-extrabold tracking-tighter leading-none mb-6">COMERCIAL</h1>
                 </div>
-
             </div>
         </header>
 
-        <!-- Projects: Full-Width Sections -->
-        <div>
-            {projects.map((project) => (
-                <section class="mb-20 md:mb-32 overflow-hidden">
-                    <!-- Global Image Block -->
-                    <div class="w-full relative bg-stone-100 aspect-video md:aspect-21/9">
-                        <ProjectCarousel images={project.images} id={project.id} />
-                    </div>
-                    
-                    <!-- Global Info Block -->
-                    <div class="w-full mt-6 md:mt-8 px-8">
-                        <div class="grid grid-cols-1 md:grid-cols-12">
-                            <div class="md:col-span-12">
-                                <h2 class="font-headline text-3xl md:text-4xl font-extrabold uppercase tracking-tighter mb-4 leading-none">
-                                    {project.title}
-                                </h2>
-                                <p class="font-body text-[0.95rem] md:text-lg text-on-surface-variant leading-relaxed opacity-80 max-w-none">
-                                    {project.description}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            ))}
-        </div>
-
-
-
-        <!-- CTA Section -->
-        <section class="relative mt-48 px-8 py-32 bg-stone-950 text-white flex items-center justify-center text-center bg-cover bg-center" style={`background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${fondoBanner.src});`}>
-            <div class="relative z-10 max-w-2xl">
-                <h3 class="font-headline text-4xl font-extrabold uppercase tracking-tighter mb-8 italic">Empieza tu sueño</h3>
-                <a class="inline-block bg-white text-black px-12 py-5 font-headline font-bold uppercase tracking-widest text-sm hover:bg-stone-200 transition-colors" href="https://wa.me/573008299673">
-                    Cotizar ahora
-                </a>
-            </div>
-        </section>
+        <ProjectList projects={projects} />
+        <ProjectCTA />
     </main>
 </Layout>

@@ -1,312 +1,40 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import ProjectCarousel from '../../components/ProjectCarousel.astro';
-import fondoBanner from '../../assets/fondoBanner.png';
+import ProjectList from '../../components/ProjectList.astro';
+import ProjectCTA from '../../components/ProjectCTA.astro';
 
-import AptoCC_1 from '../../assets/AptoCC/AptoCC_1.jpeg';
-import AptoCC_2 from '../../assets/AptoCC/AptoCC_2.jpeg';
-import AptoCC_3 from '../../assets/AptoCC/AptoCC_3.jpeg';
-import AptoCC_4 from '../../assets/AptoCC/AptoCC_4.jpeg';
-import AptoCC_5 from '../../assets/AptoCC/AptoCC_5.jpeg';
-import AptoCC_6 from '../../assets/AptoCC/AptoCC_6.jpeg';
-import AptoCC_7 from '../../assets/AptoCC/AptoCC_7.jpeg';
-import AptoCC_8 from '../../assets/AptoCC/AptoCC_8.jpeg';
+const mapImages = (modules: Record<string, any>) =>
+    Object.values(modules)
+        .map((m: any) => m.default?.src ?? '').filter(Boolean)
+        .sort((a: string, b: string) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
 
-import AptoCV_1 from '../../assets/AptoCV/AptoCV_1.jpeg';
-import AptoCV_2 from '../../assets/AptoCV/AptoCV_2.jpeg';
-import AptoCV_3 from '../../assets/AptoCV/AptoCV_3.jpeg';
-import AptoCV_4 from '../../assets/AptoCV/AptoCV_4.jpeg';
-import AptoCV_5 from '../../assets/AptoCV/AptoCV_5.jpeg';
-import AptoCV_6 from '../../assets/AptoCV/AptoCV_6.jpeg';
-import AptoCV_7 from '../../assets/AptoCV/AptoCV_7.jpeg';
-import AptoCV_8 from '../../assets/AptoCV/AptoCV_8.jpeg';
-import AptoCV_9 from '../../assets/AptoCV/AptoCV_9.jpeg';
-import AptoCV_10 from '../../assets/AptoCV/AptoCV_10.jpeg';
- 
-import Apto602_1 from '../../assets/Apto602/Apto602_1.jpeg';
-import Apto602_2 from '../../assets/Apto602/Apto602_2.jpeg';
-import Apto602_3 from '../../assets/Apto602/Apto602_3.jpeg';
-import Apto602_4 from '../../assets/Apto602/Apto602_4.jpeg';
-import Apto602_5 from '../../assets/Apto602/Apto602_5.jpeg';
-
-import AptoLR1 from '../../assets/AptoLR/AptoLR1.jpg';
-import AptoLR2 from '../../assets/AptoLR/AptoLR2.jpg';
-import AptoLR3 from '../../assets/AptoLR/AptoLR3.jpg';
-import AptoLR4 from '../../assets/AptoLR/AptoLR4.jpg';
-import AptoLR5 from '../../assets/AptoLR/AptoLR5.jpg';
-import AptoLR6 from '../../assets/AptoLR/AptoLR6.jpg'; 
-
-import CM1 from '../../assets/CasaMadrigal/CM1.jpg';
-import CM2 from '../../assets/CasaMadrigal/CM2.jpg';
-import CM3 from '../../assets/CasaMadrigal/CM3.jpg';
-import CM4 from '../../assets/CasaMadrigal/CM4.jpg';
-import CM5 from '../../assets/CasaMadrigal/CM5.jpg';
-
-import CasaMC1 from '../../assets/CasaMC/CasaMC1.jpg';
-import CasaMC2 from '../../assets/CasaMC/CasaMC2.jpg';
-import CasaMC3 from '../../assets/CasaMC/CasaMC3.jpg';
-import CasaMC5 from '../../assets/CasaMC/CasaMC5.jpg';
-import CasaMC6 from '../../assets/CasaMC/CasaMC6.jpg';
-import CasaMC7 from '../../assets/CasaMC/CasaMC7.jpg';
-import CasaMC8 from '../../assets/CasaMC/CasaMC8.jpg';
-
-
-
-import AptoK604_1 from '../../assets/AptoK604/AptoK604_1.jpeg';
-import AptoK604_2 from '../../assets/AptoK604/AptoK604_2.jpeg';
-import AptoK604_3 from '../../assets/AptoK604/AptoK604_3.jpeg';
-import AptoK604_4 from '../../assets/AptoK604/AptoK604_4.jpeg';
-import AptoK604_5 from '../../assets/AptoK604/AptoK604_5.jpeg';
-
-import CasaM8_1 from '../../assets/CasaM8/CasaM8_1.jpeg';
-import CasaM8_2 from '../../assets/CasaM8/CasaM8_2.jpeg';
-import CasaM8_3 from '../../assets/CasaM8/CasaM8_3.jpeg';
-import CasaM8_4 from '../../assets/CasaM8/CasaM8_4.jpeg';
-import CasaM8_5 from '../../assets/CasaM8/CasaM8_5.jpeg';
-import CasaM8_6 from '../../assets/CasaM8/CasaM8_6.jpeg';
-import CasaM8_7 from '../../assets/CasaM8/CasaM8_7.jpeg';
-
-import CasaMS1 from '../../assets/CasaMS/CasaMS1.png';
-import CasaMS2 from '../../assets/CasaMS/CasaMS2.png';
-import CasaMS3 from '../../assets/CasaMS/CasaMS3.png';
-import CasaMS4 from '../../assets/CasaMS/CasaMS4.png';
-import CasaMS5 from '../../assets/CasaMS/CasaMS5.png';
-
-import CasaRefugio1 from '../../assets/CasaRefugio/CasaRefugio1.jpeg';
-import CasaRefugio2 from '../../assets/CasaRefugio/CasaRefugio2.jpeg';
-import CasaRefugio3 from '../../assets/CasaRefugio/CasaRefugio3.jpeg';
-import CasaRefugio4 from '../../assets/CasaRefugio/CasaRefugio4.jpeg';
-import CasaRefugio5 from '../../assets/CasaRefugio/CasaRefugio5.jpeg';
-
-import CasaDosAguas1 from '../../assets/CasaDosAguas/CasaDosAguas1.jpeg';
-import CasaDosAguas2 from '../../assets/CasaDosAguas/CasaDosAguas2.jpeg';
-import CasaDosAguas3 from '../../assets/CasaDosAguas/CasaDosAguas3.jpeg';
-import CasaDosAguas4 from '../../assets/CasaDosAguas/CasaDosAguas4.jpeg';
-import CasaDosAguas5 from '../../assets/CasaDosAguas/CasaDosAguas5.jpeg';
-import CasaDosAguas6 from '../../assets/CasaDosAguas/CasaDosAguas6.jpeg';
-import CasaDosAguas7 from '../../assets/CasaDosAguas/CasaDosAguas7.jpeg';
-
-
-interface Project {
-    id: string;
-    title: string;
-    description: string;
-    images: string[];
-    span: string;
-}
-
-const projects: Project[] = [
-    {
-        id: 'aptocc',
-        title: 'APARTAMENTO CC',
-        description: '',
-        images: [
-            AptoCC_1.src,
-            AptoCC_2.src,
-            AptoCC_3.src,
-            AptoCC_4.src,
-            AptoCC_5.src,
-            AptoCC_6.src,
-            AptoCC_7.src,
-            AptoCC_8.src
-        ],
-        span: 'md:col-span-10 md:col-start-2'
-    },
-
-    {
-        id: 'aptocv',
-        title: 'APARTAMENTO CV301',
-        description: '',
-        images: [
-            AptoCV_1.src,
-            AptoCV_2.src,
-            AptoCV_3.src,
-            AptoCV_4.src,
-            AptoCV_5.src,
-            AptoCV_6.src,
-            AptoCV_7.src,
-            AptoCV_8.src,
-            AptoCV_9.src,
-            AptoCV_10.src
-        ],
-        span: 'md:col-span-12'
-    },
-    {
-        id: 'apto602',
-        title: 'APARTAMENTO 602',
-        description: '',
-        images: [
-            Apto602_1.src,
-            Apto602_2.src,
-            Apto602_3.src,
-            Apto602_4.src,
-            Apto602_5.src
-        ],
-        span: 'md:col-span-12'
-    },
-    {
-        id: 'aptolr',
-        title: 'APARTAMENTO LR',
-        description: '',
-        images: [
-            AptoLR1.src,
-            AptoLR2.src,
-            AptoLR3.src,
-            AptoLR4.src,
-            AptoLR5.src,
-            AptoLR6.src
-        ],
-        span: 'md:col-span-10 md:col-start-2'
-    },
-       {
-        id: 'casaMadrigal',
-        title: 'CASA MADRIGAL',
-        description: '',
-        images: [
-            CM1.src,
-            CM2.src,
-            CM3.src,
-            CM4.src,
-            CM5.src
-        ],
-        span: 'md:col-span-10 md:col-start-2'
-    },
-       {
-        id: 'casaMC',
-        title: 'CASA MC',
-        description: '',
-        images: [
-            CasaMC1.src,
-            CasaMC2.src,
-            CasaMC3.src,
-            CasaMC5.src,    
-            CasaMC6.src,
-            CasaMC7.src,
-            CasaMC8.src
-        ],
-        span: 'md:col-span-10 md:col-start-2'
-    },
-    {
-        id: 'aptoK604',
-        title: 'Apartamento K604',
-        description: '',
-        images: [
-            AptoK604_1.src,
-            AptoK604_2.src,
-            AptoK604_3.src,
-            AptoK604_4.src,
-            AptoK604_5.src
-        ],
-        span: 'md:col-span-10 md:col-start-2'
-    },
-           {
-        id: 'casaM8',
-        title: 'CASA Montaña 8',
-        description: '',
-        images: [
-            CasaM8_1.src,
-            CasaM8_2.src,
-            CasaM8_3.src,
-            CasaM8_4.src,
-            CasaM8_5.src,    
-            CasaM8_6.src,
-            CasaM8_7.src
-        ],
-        span: 'md:col-span-10 md:col-start-2'
-    },
-        {
-        id: 'casaMS',
-        title: 'CASA MS',
-        description: '',
-        images: [
-            CasaMS1.src,
-            CasaMS2.src,
-            CasaMS3.src,
-            CasaMS4.src,
-            CasaMS5.src
-        ],
-        span: 'md:col-span-10 md:col-start-2'
-    },
-        {
-        id: 'casaRefugio',
-        title: 'CASA Refugio',
-        description: '',
-        images: [
-            CasaRefugio1.src,
-            CasaRefugio2.src,
-            CasaRefugio3.src,
-            CasaRefugio4.src,
-            CasaRefugio5.src
-        ],
-        span: 'md:col-span-10 md:col-start-2'
-    },
-    {
-        id: 'casaDosAguas',
-        title: 'CASA DOS AGUAS',
-        description: '',
-        images: [
-            CasaDosAguas1.src,
-            CasaDosAguas2.src,
-            CasaDosAguas3.src,
-            CasaDosAguas4.src,
-            CasaDosAguas5.src,
-            CasaDosAguas6.src,
-            CasaDosAguas7.src
-        ],
-        span: 'md:col-span-10 md:col-start-2'
-    }
+const projects = [
+    { id: 'aptocc', title: 'APARTAMENTO CC', images: mapImages(import.meta.glob('../../assets/AptoCC/*.{jpeg,jpg,png}', { eager: true })) },
+    { id: 'aptocv', title: 'APARTAMENTO CV301', images: mapImages(import.meta.glob('../../assets/AptoCV/*.{jpeg,jpg,png}', { eager: true })) },
+    { id: 'apto602', title: 'APARTAMENTO 602', images: mapImages(import.meta.glob('../../assets/Apto602/*.{jpeg,jpg,png}', { eager: true })) },
+    { id: 'aptolr', title: 'APARTAMENTO LR', images: mapImages(import.meta.glob('../../assets/AptoLR/*.{jpeg,jpg,png}', { eager: true })) },
+    { id: 'casaMadrigal', title: 'CASA MADRIGAL', images: mapImages(import.meta.glob('../../assets/CasaMadrigal/*.{jpeg,jpg,png}', { eager: true })) },
+    { id: 'casaMC', title: 'CASA MC', images: mapImages(import.meta.glob('../../assets/CasaMC/*.{jpeg,jpg,png}', { eager: true })) },
+    { id: 'aptoK604', title: 'APARTAMENTO K604', images: mapImages(import.meta.glob('../../assets/AptoK604/*.{jpeg,jpg,png}', { eager: true })) },
+    { id: 'casaM8', title: 'CASA MONTAÑA 8', images: mapImages(import.meta.glob('../../assets/CasaM8/*.{jpeg,jpg,png}', { eager: true })) },
+    { id: 'casaMS', title: 'CASA MS', images: mapImages(import.meta.glob('../../assets/CasaMS/*.{jpeg,jpg,png}', { eager: true })) },
+    { id: 'casaRefugio', title: 'CASA REFUGIO', images: mapImages(import.meta.glob('../../assets/CasaRefugio/*.{jpeg,jpg,png}', { eager: true })) },
+    { id: 'casaDosAguas', title: 'CASA DOS AGUAS', images: mapImages(import.meta.glob('../../assets/CasaDosAguas/*.{jpeg,jpg,png}', { eager: true })) },
 ];
 ---
 
 <Layout title="Minimal arquitectura | Residencial">
     <main class="pt-32 pb-24">
-        <!-- Section Header -->
         <header class="px-8 mb-12">
             <div class="max-w-[1920px] mx-auto flex flex-col md:flex-row md:items-end justify-between gap-8">
                 <div>
                     <span class="font-label text-[1rem] uppercase tracking-[0.2em] text-outline mb-4 block"> Sector</span>
                     <h1 class="font-headline text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] leading-none font-extrabold tracking-tighter uppercase text-stone-900">RESIDENCIAL</h1>
                 </div>
-
             </div>
         </header>
 
-        <!-- Projects: Full-Width Sections -->
-        <div>
-            {projects.map((project) => (
-                <section class="mb-20 md:mb-32 overflow-hidden">
-                    <!-- Global Image Block -->
-                    <div class="w-full relative bg-stone-100 aspect-video md:aspect-21/9">
-                        <ProjectCarousel images={project.images} id={project.id} />
-                    </div>
-                    
-                    <!-- Global Info Block -->
-                    <div class="w-full mt-6 md:mt-8 px-8">
-                        <div class="grid grid-cols-1 md:grid-cols-12">
-                            <div class="md:col-span-12">
-                                <h2 class="font-headline text-3xl md:text-4xl font-extrabold uppercase tracking-tighter mb-4 leading-none">
-                                    {project.title}
-                                </h2>
-                                <p class="font-body text-[0.95rem] md:text-lg text-on-surface-variant leading-relaxed opacity-80 max-w-none">
-                                    {project.description}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            ))}
-        </div>
-
-
-
-        <!-- CTA Section: Minimalist Intervention -->
-        <section class="relative mt-48 px-8 py-32 bg-stone-950 text-white flex items-center justify-center text-center bg-cover bg-center" style={`background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${fondoBanner.src});`}>
-            <div class="relative z-10 max-w-2xl">
-                <h3 class="font-headline text-4xl font-extrabold uppercase tracking-tighter mb-8 italic">Empieza tu sueño</h3>
-                <a class="inline-block bg-white text-black px-12 py-5 font-headline font-bold uppercase tracking-widest text-sm hover:bg-stone-200 transition-colors" href="https://wa.me/573008299673">
-                    Cotizar ahora
-                </a>
-            </div>
-        </section>
+        <ProjectList projects={projects} />
+        <ProjectCTA />
     </main>
 </Layout>

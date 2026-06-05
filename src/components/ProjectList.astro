@@ -1,0 +1,34 @@
+---
+import ProjectCarousel from "./ProjectCarousel.astro";
+
+interface Project {
+    id: string;
+    title: string;
+    images: string[];
+}
+
+interface Props {
+    projects: Project[];
+}
+
+const { projects } = Astro.props;
+---
+
+{
+    projects.map((project) => (
+        <section class="mb-20 md:mb-32 overflow-hidden">
+            <div class="w-full relative bg-stone-100 aspect-video md:aspect-21/9">
+                <ProjectCarousel images={project.images} id={project.id} />
+            </div>
+            <div class="w-full mt-6 md:mt-8 px-8">
+                <div class="grid grid-cols-1 md:grid-cols-12">
+                    <div class="md:col-span-12">
+                        <h2 class="font-headline text-3xl md:text-4xl font-extrabold uppercase tracking-tighter mb-4 leading-none">
+                            {project.title}
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+    ))
+}

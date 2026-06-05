@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import fondoBanner from "../assets/fondoBanner.png";
+import ProjectCTA from "../components/ProjectCTA.astro";
 ---
 
 <Layout title="Minimal arquitectura | Nosotros">
@@ -103,22 +103,6 @@ Arquitecto de la Universidad Santo Tomás, egresado en 2019. Especialista en Ger
             </div>
         </section>
 
-        <!-- Call to Action -->
-        <section
-            class="relative py-40 bg-stone-950 text-white text-center px-8 bg-cover bg-center"
-            style={`background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${fondoBanner.src});`}
-        >
-            <div class="relative z-10">
-                <h4
-                    class="font-headline text-[2rem] sm:text-[3rem] font-bold mb-12 uppercase tracking-tighter italic"
-                >
-                    ¿Tienes un proyecto en mente?
-                </h4>
-                <a
-                    class="px-12 py-6 bg-white text-black font-label text-[0.8rem] font-bold uppercase tracking-[0.2em] transition-all hover:bg-stone-200"
-                    href="https://wa.me/573008299673">Cotiza ahora</a
-                >
-            </div>
-        </section>
+        <ProjectCTA title="¿Tienes un proyecto en mente?" buttonText="Cotiza ahora" />
     </main>
 </Layout>
